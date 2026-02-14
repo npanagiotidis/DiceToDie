@@ -1,0 +1,25 @@
+{
+  "id": "dice-to-die",
+  "title": "DiceToDie - Ability Score Generator",
+  "description": "A module to generate and assign ability scores using the 4d6 drop lowest method for ARS/OSRIC systems.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Your Name",
+      "url": "https://github.com/npanagiotidishello"
+    }
+  ],
+  "url": "https://github.com/npanagiotidishello/DiceToDie",
+  "bugs": "https://github.com/npanagiotidishello/DiceToDie/issues",
+  "changelog": "https://github.com/npanagiotidishello/DiceToDie/releases",
+  "scripts": [
+    "scripts/ability-score-roller.js"
+  ],
+  "styles": [
+    "styles/ability-roller.css"
+  ],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "13"
+  }
+}

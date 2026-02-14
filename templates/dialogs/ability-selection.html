@@ -1,0 +1,89 @@
+<div class="ability-selection-container">
+  <p style="margin-bottom: 1.5em; text-align: center;"><strong>Select the ability scores you prefer:</strong></p>
+  
+  <div style="display: flex; gap: 2em; justify-content: space-around;">
+    <!-- Roll 1 -->
+    <div class="roll-option">
+      <h4 style="text-align: center; margin-top: 0; color: #4CAF50;">Roll Set 1</h4>
+      <table class="ability-scores-table">
+        <tbody>
+          <tr>
+            <td class="ability-name"><strong>STR:</strong></td>
+            <td class="ability-score">{{roll1.str.sum}}</td>
+            <td class="ability-dice"><small>{{roll1.str.keptDice}} ({{roll1.str.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>DEX:</strong></td>
+            <td class="ability-score">{{roll1.dex.sum}}</td>
+            <td class="ability-dice"><small>{{roll1.dex.keptDice}} ({{roll1.dex.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>CON:</strong></td>
+            <td class="ability-score">{{roll1.con.sum}}</td>
+            <td class="ability-dice"><small>{{roll1.con.keptDice}} ({{roll1.con.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>INT:</strong></td>
+            <td class="ability-score">{{roll1.int.sum}}</td>
+            <td class="ability-dice"><small>{{roll1.int.keptDice}} ({{roll1.int.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>WIS:</strong></td>
+            <td class="ability-score">{{roll1.wis.sum}}</td>
+            <td class="ability-dice"><small>{{roll1.wis.keptDice}} ({{roll1.wis.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>CHA:</strong></td>
+            <td class="ability-score">{{roll1.cha.sum}}</td>
+            <td class="ability-dice"><small>{{roll1.cha.keptDice}} ({{roll1.cha.dropped}}↓)</small></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="select-roll" data-roll="roll1">
+        Select Roll 1
+      </button>
+    </div>
+
+    <!-- Roll 2 -->
+    <div class="roll-option">
+      <h4 style="text-align: center; margin-top: 0; color: #2196F3;">Roll Set 2</h4>
+      <table class="ability-scores-table">
+        <tbody>
+          <tr>
+            <td class="ability-name"><strong>STR:</strong></td>
+            <td class="ability-score">{{roll2.str.sum}}</td>
+            <td class="ability-dice"><small>{{roll2.str.keptDice}} ({{roll2.str.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>DEX:</strong></td>
+            <td class="ability-score">{{roll2.dex.sum}}</td>
+            <td class="ability-dice"><small>{{roll2.dex.keptDice}} ({{roll2.dex.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>CON:</strong></td>
+            <td class="ability-score">{{roll2.con.sum}}</td>
+            <td class="ability-dice"><small>{{roll2.con.keptDice}} ({{roll2.con.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>INT:</strong></td>
+            <td class="ability-score">{{roll2.int.sum}}</td>
+            <td class="ability-dice"><small>{{roll2.int.keptDice}} ({{roll2.int.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>WIS:</strong></td>
+            <td class="ability-score">{{roll2.wis.sum}}</td>
+            <td class="ability-dice"><small>{{roll2.wis.keptDice}} ({{roll2.wis.dropped}}↓)</small></td>
+          </tr>
+          <tr>
+            <td class="ability-name"><strong>CHA:</strong></td>
+            <td class="ability-score">{{roll2.cha.sum}}</td>
+            <td class="ability-dice"><small>{{roll2.cha.keptDice}} ({{roll2.cha.dropped}}↓)</small></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="select-roll" data-roll="roll2">
+        Select Roll 2
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+/* DiceToDie Module Styles */
+
+.ability-generation-container {
+  padding: 1em;
+  border-top: 2px solid #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+  text-align: center;
+  margin: 1em 0;
+  background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.05) 100%);
+}
+
+.ability-generation-container .btn.dice-to-die-roller {
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.ability-generation-container .btn.dice-to-die-roller:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+}
+
+.ability-generation-container .btn.dice-to-die-roller:active {
+  transform: translateY(0);
+}
+
+/* Dialog Styles */
+.ability-selection-container {
+  font-family: inherit;
+  color: #333;
+}
+
+.roll-option {
+  flex: 1;
+  padding: 1.5em;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.roll-option:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #999;
+}
+
+.roll-option h4 {
+  margin: 0 0 1em 0;
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid currentColor;
+}
+
+.ability-scores-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+.ability-scores-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s;
+}
+
+.ability-scores-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.ability-scores-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.ability-scores-table td {
+  padding: 0.75em 0.5em;
+  text-align: left;
+}
+
+.ability-name {
+  font-weight: 600;
+  width: 50px;
+  color: #333;
+}
+
+.ability-score {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 50px;
+  color: #4CAF50;
+}
+
+.ability-dice {
+  font-size: 0.85em;
+  color: #888;
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+/* Selection Buttons */
+.select-roll {
+  width: 100%;
+  padding: 0.75em;
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.select-roll:hover {
+  background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.select-roll:active {
+  transform: translateY(0);
+}
+
+/* Dialog window override */
+.dialog .window-content {
+  overflow-y: auto;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .ability-selection-container {
+    flex-direction: column;
+  }
+  
+  .ability-selection-container > div {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+  }
+}
