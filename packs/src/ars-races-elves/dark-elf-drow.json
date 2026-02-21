@@ -1,0 +1,24 @@
+{
+  "_id": "DarkElfDrowARSRa",
+  "name": "Dark Elf (Drow)",
+  "type": "race",
+  "img": "icons/environment/settlement/cave.webp",
+  "system": {
+    "description": "<h2>Dark Elf (Drow)</h2><p>The dark elves, or drow, are the most feared and infamous of all the elven subraces. Driven into the deepest reaches of the Underdark millennia ago, the drow have adapted to life without sunlight and developed powerful innate magical abilities. Their skin ranges from dark brown to obsidian black, and their hair is typically white or silver. Drow society is matriarchal and governed by the priestesses of a malevolent spider goddess. Most drow are neutral evil or chaotic evil in alignment.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Dexterity:</strong> +1</li><li><strong>Intelligence:</strong> +1</li><li><strong>Constitution:</strong> −1</li><li><strong>Charisma:</strong> +1 (among drow only; −1 to surface races unfamiliar with drow)</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 120 feet.</li><li><strong>Resistance to Sleep and Charm:</strong> 90% immunity to sleep spells and +2 bonus on saving throws vs. charm and hold spells.</li><li><strong>Innate Spell-like Abilities:</strong> Drow of noble families can use <em>dancing lights</em>, <em>faerie fire</em>, and <em>darkness</em> once per day each as innate abilities (usable from 4th level onward).</li><li><strong>Magic Resistance:</strong> Drow have a base 50% magic resistance that increases with level.</li><li><strong>Light Sensitivity:</strong> Drow suffer a −2 penalty to attack rolls and a −1 penalty to saving throws when in bright sunlight or the radius of a <em>continual light</em> spell. Their infravision is reduced to 30 feet in bright light.</li><li><strong>Drow Equipment:</strong> Drow equipment and magic items (adamantine weapons, armor) exposed to sunlight for an extended period lose their enchantment and crumble to dust.</li><li><strong>Detect Secret Doors:</strong> 1-in-6 passively, 2-in-6 actively.</li></ul><h3>Class Restrictions</h3><p>Fighter, Magic-User, Cleric (of Lolth), Thief; Fighter/Magic-User, Fighter/Cleric, Cleric/Magic-User, Fighter/Thief, Magic-User/Thief, Fighter/Magic-User/Thief multiclass.</p>",
+    "source": "The Complete Book of Elves",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 1,
+      "con": -1,
+      "int": 1,
+      "wis": 0,
+      "cha": 1
+    },
+    "infravision": 120,
+    "requirements": "Special — typically NPC or exceptional circumstances"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!DarkElfDrowARSRa"
+}

@@ -1,0 +1,24 @@
+{
+  "_id": "GullyDwarfARSRac",
+  "name": "Gully Dwarf",
+  "type": "race",
+  "img": "icons/environment/settlement/cave.webp",
+  "system": {
+    "description": "<h2>Gully Dwarf</h2><p>Gully dwarves are the most debased and pitiable of the dwarven subraces. Possibly a crossbreed between dwarves and gnomes from ages past, gully dwarves are short even by dwarven standards, filthy, and largely shunned by other demi-humans. They survive as scavengers in the ruins and refuse-heaps of other civilizations, particularly around the encampments of ogres and orcs. Despite their wretched circumstances and limited intellect, gully dwarves possess a remarkable talent for survival and an absurd amount of luck. They are chaotic neutral as a rule, caring little for order or morality — only for the next meal.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Intelligence:</strong> −2</li><li><strong>Charisma:</strong> −2</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Lucky:</strong> Once per encounter, a gully dwarf may reroll any single saving throw or attack roll and keep the better result. This reflects their absurd capacity for survival against all odds.</li><li><strong>Scavenge:</strong> Gully dwarves can find food and useful refuse in almost any environment. They have a base 80% chance to find enough food to survive in urban, subterranean, or wilderness settings.</li><li><strong>Constitution-based Saving Throw Bonus:</strong> +1 per 3.5 Constitution vs. poison and disease (they have been exposed to so much filth they have extraordinary resistance).</li><li><strong>Defensive Bonus:</strong> −4 AC vs. giants, ogres, trolls, and titans.</li><li><strong>Class Restrictions:</strong> Gully dwarves can only be fighters or thieves, and their maximum level is typically limited.</li></ul><h3>Class Restrictions</h3><p>Fighter (max 5th level), Thief (max 5th level). Generally used as NPCs.</p>",
+    "source": "The Complete Book of Dwarves",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 0,
+      "con": 0,
+      "int": -2,
+      "wis": 0,
+      "cha": -2
+    },
+    "infravision": 60,
+    "requirements": "Usually NPC only; DM discretion required for player characters"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!GullyDwarfARSRac"
+}

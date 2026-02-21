@@ -1,0 +1,24 @@
+{
+  "_id": "HumanARSRace0001",
+  "name": "Human",
+  "type": "race",
+  "img": "icons/environment/people/group.webp",
+  "system": {
+    "description": "<h2>Human</h2><p>Humans are the most common race in the known world. They are adaptable, ambitious, and capable of extraordinary diversity. Humans have no fixed place in the cosmos and are driven by a variety of motivations, making them the most versatile of the player character races.</p><h3>Ability Score Adjustments</h3><p>None — Humans have no racial ability score modifiers.</p><h3>Racial Traits</h3><ul><li><strong>Unlimited Level Advancement:</strong> Humans may advance to unlimited levels in any character class.</li><li><strong>Unrestricted Class Access:</strong> Humans may be of any character class.</li><li><strong>Extra Starting Languages:</strong> Humans begin play knowing their native language plus a number of additional languages based on Intelligence.</li><li><strong>Bonus Proficiency:</strong> Human characters receive one extra non-weapon proficiency at character creation.</li></ul><h3>Class Restrictions</h3><p>None — Humans may choose any character class.</p>",
+    "source": "Player's Handbook (2nd Edition)",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 0,
+      "con": 0,
+      "int": 0,
+      "wis": 0,
+      "cha": 0
+    },
+    "infravision": 0,
+    "requirements": "None"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!HumanARSRace0001"
+}

@@ -1,0 +1,24 @@
+{
+  "_id": "ForestGnomeARSRa",
+  "name": "Forest Gnome",
+  "type": "race",
+  "img": "icons/environment/wilderness/forest-clearing.webp",
+  "system": {
+    "description": "<h2>Forest Gnome</h2><p>Forest gnomes are the most reclusive and nature-loving of the gnomish subraces. They dwell in ancient forest groves, living in tiny, camouflaged villages that are almost impossible to find unless one knows where to look. Forest gnomes are slightly smaller than rock gnomes, with green or brown-tinted skin that helps them blend into their woodland homes. They have an innate gift for illusion and a deep bond with woodland animals, particularly small ones. Forest gnomes are very rarely encountered by other races and prefer it that way.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Dexterity:</strong> +1</li><li><strong>Intelligence:</strong> +1</li><li><strong>Constitution:</strong> −1</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Speak with Animals:</strong> Forest gnomes can speak with forest animals (squirrels, foxes, deer, birds, etc.) at will.</li><li><strong>Natural Illusionist:</strong> Forest gnomes can use <em>prestidigitation</em> and minor image effects as innate abilities. They receive a +1 bonus to Illusionist spells cast.</li><li><strong>Woodland Stealth:</strong> In natural settings, forest gnomes have a 4-in-6 chance of moving silently and a 4-in-6 chance of hiding in shadows.</li><li><strong>Detect Unsafe Terrain:</strong> In natural or underground settings, detect unsafe walls and floors on 1–5 on a d10.</li><li><strong>Saving Throw Bonus:</strong> +1 per level vs. magic spells.</li><li><strong>Attack Bonus:</strong> +1 to attack rolls vs. kobolds and goblins.</li></ul><h3>Class Restrictions</h3><p>Fighter, Illusionist, Thief, Druid; Fighter/Illusionist, Fighter/Thief, Illusionist/Thief multiclass.</p>",
+    "source": "The Complete Book of Gnomes & Halflings",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 1,
+      "con": -1,
+      "int": 1,
+      "wis": 0,
+      "cha": 0
+    },
+    "infravision": 60,
+    "requirements": "CON 8 minimum"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!ForestGnomeARSRa"
+}

@@ -1,0 +1,24 @@
+{
+  "_id": "SylvanElfARSRace",
+  "name": "Sylvan Elf (Wood Elf)",
+  "type": "race",
+  "img": "icons/environment/wilderness/forest-clearing.webp",
+  "system": {
+    "description": "<h2>Sylvan Elf (Wood Elf)</h2><p>Sylvan elves, also called wood elves, are the most physical of the elven subraces — taller, sturdier, and more attuned to the raw power of nature than their high-elf kin. They dwell deep within ancient forest, living in harmony with the trees and beasts around them. Their hair ranges from brown to dark golden, and their eyes are hazel, brown, or green. Sylvan elves tend to be more rustic and less intellectually inclined than other elves, preferring action to scholarship.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Strength:</strong> +1</li><li><strong>Dexterity:</strong> +1</li><li><strong>Intelligence:</strong> −1</li><li><strong>Charisma:</strong> −1 (to non-woodland races)</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Resistance to Sleep and Charm:</strong> 90% immunity to sleep spells and +2 bonus on saving throws vs. charm and hold spells.</li><li><strong>Detect Secret and Concealed Doors:</strong> 1-in-6 passively, 2-in-6 actively.</li><li><strong>Move Silently:</strong> Exceptional woodland stealth; surprise opponents on 1–4 on a d6 in forests.</li><li><strong>Woodland Invisibility:</strong> When motionless in natural surroundings, sylvan elves are effectively invisible.</li><li><strong>Weapon Proficiency Bonus:</strong> +1 to attack rolls with long bow and long sword.</li><li><strong>Track:</strong> Sylvan elves can track in wilderness settings as a ranger of half their level.</li></ul><h3>Class Restrictions</h3><p>Fighter, Magic-User (limited), Thief, Ranger; Fighter/Thief, Fighter/Magic-User, Magic-User/Thief, Fighter/Magic-User/Thief multiclass.</p>",
+    "source": "The Complete Book of Elves",
+    "abilityModifiers": {
+      "str": 1,
+      "dex": 1,
+      "con": 0,
+      "int": -1,
+      "wis": 0,
+      "cha": -1
+    },
+    "infravision": 60,
+    "requirements": "CON 8 minimum"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!SylvanElfARSRace"
+}

@@ -1,0 +1,24 @@
+{
+  "_id": "TinkerGnomeARSRa",
+  "name": "Tinker Gnome",
+  "type": "race",
+  "img": "icons/equipment/tools/wrench.webp",
+  "system": {
+    "description": "<h2>Tinker Gnome</h2><p>Tinker gnomes are an engineering-obsessed subrace of gnomes dedicated to the construction of elaborate mechanical devices — most of which work exactly as designed, in entirely unexpected ways. Tinker gnomes speak at incredible speed, in run-on sentences stuffed with technical terminology, parenthetical asides, and tangential digressions. Their devices are legendary for their complexity, occasional brilliance, and frequent catastrophic failure. Tinker gnomes live in large, noisy communities built around workshops, forges, and testing grounds, constantly refining the flaws in their previous designs (usually by discovering entirely new flaws). Despite the chaos, they are relentlessly optimistic.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Intelligence:</strong> +2</li><li><strong>Wisdom:</strong> −2</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Engineering Aptitude:</strong> Tinker gnomes receive two free non-weapon proficiencies in engineering-related skills (e.g., Engineering, Blacksmithing, Gem Cutting).</li><li><strong>Device Construction:</strong> Tinker gnomes can construct mechanical devices. Each device has a base 60% chance of functioning correctly on first use, plus 5% per point of Intelligence above 12.</li><li><strong>Detect Construction Flaws:</strong> Can identify structural weaknesses in mechanisms, traps, and constructed objects on 1–5 on a d6.</li><li><strong>Attack Bonus:</strong> +1 to attack rolls vs. kobolds and goblins.</li><li><strong>Saving Throw Bonus:</strong> +1 per level vs. magic spells.</li><li><strong>Defensive Bonus:</strong> −4 AC vs. gnolls, bugbears, ogres, trolls, ogre magi, giants, and titans.</li></ul><h3>Class Restrictions</h3><p>Fighter, Illusionist, Cleric, Thief; Fighter/Illusionist, Fighter/Thief, Illusionist/Thief multiclass.</p>",
+    "source": "The Complete Book of Gnomes & Halflings",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 0,
+      "con": 0,
+      "int": 2,
+      "wis": -2,
+      "cha": 0
+    },
+    "infravision": 60,
+    "requirements": "CON 8 minimum, STR 6 minimum"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!TinkerGnomeARSRa"
+}

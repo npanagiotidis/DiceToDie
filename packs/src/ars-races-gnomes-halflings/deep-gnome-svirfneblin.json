@@ -1,0 +1,24 @@
+{
+  "_id": "DeepGnomeSvirfne",
+  "name": "Deep Gnome (Svirfneblin)",
+  "type": "race",
+  "img": "icons/environment/settlement/cave.webp",
+  "system": {
+    "description": "<h2>Deep Gnome (Svirfneblin)</h2><p>The svirfneblin, or deep gnomes, are the underground-dwelling cousins of surface gnomes. Long centuries in the dangerous depths of the Underdark have made them somber, cautious, and hardened in ways their cheerful surface kin are not. Deep gnomes have grey, rocky skin, lack of hair, and large eyes adapted to perpetual darkness. They live in small, hidden communities built to be as inconspicuous as possible, always alert for the presence of drow, illithids, and other Underdark horrors. Despite their grim demeanor, svirfneblin are fundamentally good-natured and fiercely loyal to their tight-knit communities.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Dexterity:</strong> +2</li><li><strong>Wisdom:</strong> +2</li><li><strong>Strength:</strong> −2</li><li><strong>Charisma:</strong> −2</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 120 feet.</li><li><strong>Magic Resistance:</strong> Svirfneblin have a base 20% magic resistance that increases with level.</li><li><strong>Innate Spell-like Abilities:</strong> Once per day each — <em>blindness</em>, <em>blur</em>, and <em>change self</em>.</li><li><strong>Stonecunning:</strong> Superior stonework detection; detect grade on 1–5 in d6, traps on 1–4, unsafe walls on 1–8 on d10.</li><li><strong>Nondetection:</strong> Svirfneblin are naturally difficult to locate via magical means; detect magic and similar spells require a saving throw vs. spell to reveal them.</li><li><strong>Stealth:</strong> Deep gnomes have a 4-in-6 chance to move silently and hide in shadows in underground environments.</li><li><strong>Saving Throw Bonus:</strong> +1 per level vs. magic spells, stacking with magic resistance.</li></ul><h3>Class Restrictions</h3><p>Fighter, Illusionist, Thief; Fighter/Illusionist, Fighter/Thief, Illusionist/Thief multiclass. DM permission recommended.</p>",
+    "source": "The Complete Book of Gnomes & Halflings",
+    "abilityModifiers": {
+      "str": -2,
+      "dex": 2,
+      "con": 0,
+      "int": 0,
+      "wis": 2,
+      "cha": -2
+    },
+    "infravision": 120,
+    "requirements": "DM permission recommended; CON 8 minimum"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!DeepGnomeSvirfne"
+}

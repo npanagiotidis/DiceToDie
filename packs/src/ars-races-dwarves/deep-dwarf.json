@@ -1,0 +1,24 @@
+{
+  "_id": "DeepDwarfARSRace",
+  "name": "Deep Dwarf",
+  "type": "race",
+  "img": "icons/environment/settlement/cave.webp",
+  "system": {
+    "description": "<h2>Deep Dwarf</h2><p>Deep dwarves make their homes in the deepest levels of the Underdark, far below the holds of their mountain dwarf cousins. Long isolation in the darkness has left them pale and somewhat withdrawn. Deep dwarves are slightly shorter and even stouter than mountain dwarves, with large, pale eyes well adapted to near-total darkness. They are the most suspicious of all dwarven subraces toward outsiders, including surface dwarves. They have highly developed subterranean sensory abilities but are unaccustomed to sunlight and sometimes suffer in bright conditions.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Constitution:</strong> +1</li><li><strong>Charisma:</strong> −2</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 90 feet — extended due to deep underground adaptation.</li><li><strong>Detect Stonework:</strong> Detect grade/slope on 1–5 in d6; new construction on 1–5; sliding walls on 1–4; stonework traps on 1–4; depth underground on 1–4 (superior to mountain dwarves).</li><li><strong>Attack Bonus:</strong> +1 to attack rolls vs. orcs, half-orcs, goblins, and hobgoblins.</li><li><strong>Defensive Bonus:</strong> −4 AC vs. giants, ogres, trolls, ogre magi, and titans.</li><li><strong>Saving Throw Bonus:</strong> +1 per 3.5 points of Constitution vs. magic and poison.</li><li><strong>Light Sensitivity:</strong> In bright sunlight or the area of a <em>continual light</em> spell, deep dwarves suffer a −1 penalty to attack rolls until they have spent at least one week on the surface.</li></ul><h3>Class Restrictions</h3><p>Fighter, Cleric, Thief; Fighter/Cleric, Fighter/Thief multiclass.</p>",
+    "source": "The Complete Book of Dwarves",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 0,
+      "con": 1,
+      "int": 0,
+      "wis": 0,
+      "cha": -2
+    },
+    "infravision": 90,
+    "requirements": "CON 12 minimum"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!DeepDwarfARSRace"
+}
