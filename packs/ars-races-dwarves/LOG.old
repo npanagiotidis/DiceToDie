@@ -1,5 +1,5 @@
-2026/02/21-15:33:52.005669 7f51e37fe6c0 Delete type=3 #1
-2026/02/21-15:33:52.008157 7f51e27fc6c0 Level-0 table #5: started
-2026/02/21-15:33:52.008958 7f51e27fc6c0 Level-0 table #5: 7929 bytes OK
-2026/02/21-15:33:52.009396 7f51e27fc6c0 Delete type=0 #3
-2026/02/21-15:33:52.009486 7f51e27fc6c0 Manual compaction at level-0 from '!items!DeepDwarfARSRace' @ 72057594037927935 : 1 .. '!items!WildDwarfARSRace' @ 0 : 0; will stop at (end)
+2026/02/21-15:43:10.889519 7fa431bfd6c0 Delete type=3 #1
+2026/02/21-15:43:10.891792 7fa413fff6c0 Level-0 table #5: started
+2026/02/21-15:43:10.892490 7fa413fff6c0 Level-0 table #5: 10626 bytes OK
+2026/02/21-15:43:10.893067 7fa413fff6c0 Delete type=0 #3
+2026/02/21-15:43:10.893133 7fa413fff6c0 Manual compaction at level-0 from '!items!DeepDwarfARSRace' @ 72057594037927935 : 1 .. '!items!WildDwarfARSRace' @ 0 : 0; will stop at (end)

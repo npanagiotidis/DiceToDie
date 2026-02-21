@@ -15,7 +15,52 @@
       "cha": 0
     },
     "infravision": 60,
-    "requirements": "CON 8 minimum"
+    "requirements": "CON 8 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per level (minimum +1)"
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "kobolds",
+            "goblins"
+          ],
+          "bonus": 1
+        }
+      ],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "unsafe walls and floors",
+          "dieSize": 10,
+          "successOn": 5
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Speak with Animals",
+          "description": "Forest gnomes speak with forest animals (squirrels, foxes, deer, birds, etc.) at will."
+        },
+        {
+          "name": "Natural Illusionist",
+          "description": "Can use prestidigitation and minor image effects innately; +1 bonus to Illusionist spell effects."
+        },
+        {
+          "name": "Woodland Stealth",
+          "description": "4-in-6 chance to move silently and hide in shadows in natural settings."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Illusionist, Thief, Druid; Fighter/Illusionist, Fighter/Thief, Illusionist/Thief"
+    }
   },
   "effects": [],
   "folder": null,

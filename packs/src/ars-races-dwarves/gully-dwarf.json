@@ -15,7 +15,48 @@
       "cha": -2
     },
     "infravision": 60,
-    "requirements": "Usually NPC only; DM discretion required for player characters"
+    "requirements": "Usually NPC only; DM discretion required for player characters",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "poison",
+          "bonus": "+1 per 3.5 CON"
+        },
+        {
+          "vs": "disease",
+          "bonus": "+1 per 3.5 CON"
+        }
+      ],
+      "attackBonuses": [],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "giants",
+            "ogres",
+            "trolls",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Lucky",
+          "description": "Once per encounter, reroll any single saving throw or attack roll and keep the better result."
+        },
+        {
+          "name": "Scavenge",
+          "description": "80% base chance to find sufficient food in urban, subterranean, or wilderness settings."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter (max 5th level), Thief (max 5th level). Generally NPC."
+    }
   },
   "effects": [],
   "folder": null,

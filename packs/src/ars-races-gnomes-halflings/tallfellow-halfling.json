@@ -15,7 +15,83 @@
       "cha": 0
     },
     "infravision": 30,
-    "requirements": "CON 10 minimum, STR 7 minimum"
+    "requirements": "CON 10 minimum, STR 7 minimum",
+    "racialTraits": {
+      "sleepImmunity": 15,
+      "charmSaveBonus": 1,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic spells",
+          "bonus": 4
+        },
+        {
+          "vs": "wand effects",
+          "bonus": 4
+        },
+        {
+          "vs": "staves",
+          "bonus": 4
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "slings",
+            "thrown weapons"
+          ],
+          "bonus": 3,
+          "note": "missile weapons only"
+        }
+      ],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "giants",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        },
+        {
+          "ability": "grade or slope (underground)",
+          "dieSize": 6,
+          "successOn": 3
+        },
+        {
+          "ability": "unsafe stonework",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Move Silently",
+          "description": "Move silently in natural terrain, surprising on 1–4 on a d6 outdoors."
+        },
+        {
+          "name": "Elven Heritage",
+          "description": "Partial elven ancestry grants limited sleep resistance and charm save bonus."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Cleric, Thief; Fighter/Thief"
+    }
   },
   "effects": [],
   "folder": null,

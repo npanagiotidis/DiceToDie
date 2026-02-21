@@ -15,7 +15,65 @@
       "cha": 0
     },
     "infravision": 30,
-    "requirements": "CON 10 minimum, STR 7 minimum"
+    "requirements": "CON 10 minimum, STR 7 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic spells",
+          "bonus": 4
+        },
+        {
+          "vs": "wand effects",
+          "bonus": 4
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "slings",
+            "thrown weapons"
+          ],
+          "bonus": 3,
+          "note": "missile weapons only"
+        }
+      ],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "giants",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "grade or slope (underground)",
+          "dieSize": 6,
+          "successOn": 3
+        },
+        {
+          "ability": "new construction and unsafe stonework",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Move Silently",
+          "description": "Halflings move in near-perfect silence in non-metal armor, surprising on 1–4 on a d6 outdoors."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Cleric, Thief; Fighter/Thief"
+    }
   },
   "effects": [],
   "folder": null,

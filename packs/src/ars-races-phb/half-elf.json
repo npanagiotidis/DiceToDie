@@ -15,7 +15,41 @@
       "cha": 0
     },
     "infravision": 60,
-    "requirements": "None"
+    "requirements": "None",
+    "racialTraits": {
+      "sleepImmunity": 30,
+      "charmSaveBonus": 1,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        },
+        {
+          "ability": "concealed doors (active search)",
+          "dieSize": 6,
+          "successOn": 3
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Woodland Affinity",
+          "description": "Half-elves retain some of the elven affinity for natural environments."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Magic-User, Cleric, Thief, Ranger, Druid; Fighter/Magic-User, Fighter/Thief, Cleric/Fighter, Cleric/Ranger, Cleric/Magic-User, Thief/Magic-User, Cleric/Fighter/Magic-User, Fighter/Magic-User/Thief, Fighter/Magic-User/Cleric"
+    }
   },
   "effects": [],
   "folder": null,

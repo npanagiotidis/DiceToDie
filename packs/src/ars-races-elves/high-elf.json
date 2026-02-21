@@ -15,7 +15,51 @@
       "cha": 0
     },
     "infravision": 60,
-    "requirements": "CON 8 minimum"
+    "requirements": "CON 8 minimum",
+    "racialTraits": {
+      "sleepImmunity": 90,
+      "charmSaveBonus": 2,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [
+        {
+          "vs": [
+            "long bow",
+            "short bow",
+            "long sword",
+            "short sword"
+          ],
+          "bonus": 1,
+          "note": "weapon proficiency bonus"
+        }
+      ],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Move Silently",
+          "description": "Move silently in non-metal armor in natural settings."
+        },
+        {
+          "name": "Woodland Stealth",
+          "description": "Nearly invisible in woodland settings while stationary."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Magic-User, Thief; Fighter/Magic-User, Fighter/Thief, Magic-User/Thief, Fighter/Magic-User/Thief"
+    }
   },
   "effects": [],
   "folder": null,

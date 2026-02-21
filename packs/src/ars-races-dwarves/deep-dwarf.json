@@ -15,7 +15,83 @@
       "cha": -2
     },
     "infravision": 90,
-    "requirements": "CON 12 minimum"
+    "requirements": "CON 12 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per 3.5 CON"
+        },
+        {
+          "vs": "poison",
+          "bonus": "+1 per 3.5 CON"
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "orcs",
+            "half-orcs",
+            "goblins",
+            "hobgoblins"
+          ],
+          "bonus": 1
+        }
+      ],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "giants",
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "grade or slope",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "new tunnel/passage construction",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "sliding/shifting walls or rooms",
+          "dieSize": 6,
+          "successOn": 4
+        },
+        {
+          "ability": "stonework traps",
+          "dieSize": 6,
+          "successOn": 4
+        },
+        {
+          "ability": "approximate depth underground",
+          "dieSize": 6,
+          "successOn": 4
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [],
+      "penalties": [
+        {
+          "condition": "bright sunlight or continual light (until 1 week on surface)",
+          "effects": {
+            "attackPenalty": -1
+          }
+        }
+      ],
+      "classRestrictions": "Fighter, Cleric, Thief; Fighter/Cleric, Fighter/Thief"
+    }
   },
   "effects": [],
   "folder": null,

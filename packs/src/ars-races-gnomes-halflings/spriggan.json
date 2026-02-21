@@ -15,7 +15,54 @@
       "cha": -2
     },
     "infravision": 60,
-    "requirements": "Usually NPC; DM permission for player characters"
+    "requirements": "Usually NPC; DM permission for player characters",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per level (minimum +1)"
+        }
+      ],
+      "attackBonuses": [],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "giants",
+            "titans"
+          ],
+          "acBonus": -4,
+          "note": "in normal (small) form only"
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "traps (due to love of setting/finding traps)",
+          "dieSize": 6,
+          "successOn": 4
+        }
+      ],
+      "innateAbilities": [
+        {
+          "name": "Enlarge (self only)",
+          "usesPerDay": 1,
+          "note": "+4 STR, +2 CON, -2 DEX; lasts 1 turn per level"
+        }
+      ],
+      "specialAbilities": [
+        {
+          "name": "Thieving Aptitude",
+          "description": "Bonuses to Pick Pockets and Move Silently equivalent to a thief two levels higher."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Thief; Fighter/Thief. Generally NPC or DM permission."
+    }
   },
   "effects": [],
   "folder": null,

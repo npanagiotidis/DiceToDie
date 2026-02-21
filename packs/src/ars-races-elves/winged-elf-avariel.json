@@ -15,7 +15,56 @@
       "cha": 0
     },
     "infravision": 60,
-    "requirements": "DM permission required; CON 8 minimum"
+    "requirements": "DM permission required; CON 8 minimum",
+    "racialTraits": {
+      "sleepImmunity": 90,
+      "charmSaveBonus": 2,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [
+        {
+          "vs": [
+            "long bow",
+            "short bow"
+          ],
+          "bonus": 1,
+          "note": "weapon proficiency bonus"
+        },
+        {
+          "vs": [
+            "any"
+          ],
+          "bonus": 1,
+          "note": "aerial combat bonus when airborne"
+        }
+      ],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Flight",
+          "description": "Fly at movement rate 18 (maneuverability class B). Cannot fly in medium or heavy armor."
+        },
+        {
+          "name": "Wing Vulnerability",
+          "description": "Wings can be targeted; each wing hit halves flight movement. Both wings damaged grounds the avariel."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Magic-User, Thief; Fighter/Magic-User, Fighter/Thief, Magic-User/Thief. DM permission required."
+    }
   },
   "effects": [],
   "folder": null,

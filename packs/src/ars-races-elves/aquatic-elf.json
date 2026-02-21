@@ -15,7 +15,61 @@
       "cha": 0
     },
     "infravision": 120,
-    "requirements": "CON 8 minimum"
+    "requirements": "CON 8 minimum",
+    "racialTraits": {
+      "sleepImmunity": 90,
+      "charmSaveBonus": 2,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [
+        {
+          "vs": [
+            "trident",
+            "spear",
+            "crossbow"
+          ],
+          "bonus": 1,
+          "note": "weapon proficiency bonus"
+        }
+      ],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Breathe Water",
+          "description": "Aquatic elves breathe both air and water without restriction."
+        },
+        {
+          "name": "Underwater Movement",
+          "description": "Aquatic elves swim at movement rate 12."
+        },
+        {
+          "name": "Extended Underwater Infravision",
+          "description": "Infravision 120 feet underwater; no infravision on land."
+        }
+      ],
+      "penalties": [
+        {
+          "condition": "land (extended period)",
+          "effects": {
+            "note": "Uncomfortable in heavy surface-world armor after prolonged time out of water."
+          }
+        }
+      ],
+      "classRestrictions": "Fighter, Magic-User, Thief; Fighter/Magic-User, Fighter/Thief, Magic-User/Thief, Fighter/Magic-User/Thief"
+    }
   },
   "effects": [],
   "folder": null,

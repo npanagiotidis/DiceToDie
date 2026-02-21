@@ -15,7 +15,85 @@
       "cha": -1
     },
     "infravision": 60,
-    "requirements": "CON 12 minimum"
+    "requirements": "CON 12 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per 3.5 CON"
+        },
+        {
+          "vs": "poison",
+          "bonus": "+1 per 3.5 CON"
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "orcs",
+            "half-orcs",
+            "goblins",
+            "hobgoblins"
+          ],
+          "bonus": 1
+        }
+      ],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "giants",
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "grade or slope",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "new tunnel/passage construction",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "sliding/shifting walls or rooms",
+          "dieSize": 6,
+          "successOn": 4
+        },
+        {
+          "ability": "stonework traps, pits, and deadfalls",
+          "dieSize": 6,
+          "successOn": 3
+        },
+        {
+          "ability": "approximate depth underground",
+          "dieSize": 6,
+          "successOn": 3
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Worldly Experience",
+          "description": "Sundered dwarves gain one extra non-weapon proficiency at creation reflecting their wandering experience."
+        },
+        {
+          "name": "Wanderer's Resilience",
+          "description": "+1 bonus to Survival non-weapon proficiency checks in non-underground environments."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Cleric, Thief; Fighter/Cleric, Fighter/Thief"
+    }
   },
   "effects": [],
   "folder": null,

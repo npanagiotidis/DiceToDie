@@ -15,7 +15,25 @@
       "cha": -2
     },
     "infravision": 60,
-    "requirements": "None"
+    "requirements": "None",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [],
+      "defensiveBonuses": [],
+      "detectAbilities": [],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Pass for Human",
+          "description": "A half-orc with CHA 13+ may pass for human in dim lighting or at distance."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Cleric, Thief, Assassin; Fighter/Cleric, Fighter/Thief, Cleric/Thief, Cleric/Assassin, Fighter/Cleric/Thief, Fighter/Assassin"
+    }
   },
   "effects": [],
   "folder": null,

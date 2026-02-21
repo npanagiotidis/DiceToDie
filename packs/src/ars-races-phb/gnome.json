@@ -15,7 +15,72 @@
       "cha": 0
     },
     "infravision": 60,
-    "requirements": "CON 8 minimum, STR 6 minimum"
+    "requirements": "CON 8 minimum, STR 6 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per level (minimum +1)"
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "kobolds",
+            "goblins"
+          ],
+          "bonus": 1
+        }
+      ],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "gnolls",
+            "bugbears",
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "giants",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "grade or slope",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "unsafe walls, ceilings, and floors",
+          "dieSize": 10,
+          "successOn": 7
+        },
+        {
+          "ability": "approximate depth underground",
+          "dieSize": 6,
+          "successOn": 4
+        },
+        {
+          "ability": "approximate direction underground",
+          "dieSize": 6,
+          "successOn": 3
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Speak with Burrowing Mammals",
+          "description": "Gnomes can communicate with moles, badgers, ground squirrels, and similar burrowing creatures."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Illusionist, Cleric, Thief; Fighter/Illusionist, Fighter/Cleric, Fighter/Thief, Illusionist/Thief"
+    }
   },
   "effects": [],
   "folder": null,

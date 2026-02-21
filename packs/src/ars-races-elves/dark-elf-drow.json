@@ -15,7 +15,61 @@
       "cha": 1
     },
     "infravision": 120,
-    "requirements": "Special — typically NPC or exceptional circumstances"
+    "requirements": "Special — typically NPC or exceptional circumstances",
+    "racialTraits": {
+      "sleepImmunity": 90,
+      "charmSaveBonus": 2,
+      "magicResistance": 50,
+      "savingThrowBonuses": [],
+      "attackBonuses": [],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [
+        {
+          "name": "Dancing Lights",
+          "usesPerDay": 1,
+          "minLevel": 4
+        },
+        {
+          "name": "Faerie Fire",
+          "usesPerDay": 1,
+          "minLevel": 4
+        },
+        {
+          "name": "Darkness 15' Radius",
+          "usesPerDay": 1,
+          "minLevel": 4
+        }
+      ],
+      "specialAbilities": [
+        {
+          "name": "Drow Magic Resistance",
+          "description": "Base 50% magic resistance that increases with level."
+        }
+      ],
+      "penalties": [
+        {
+          "condition": "bright sunlight or continual light",
+          "effects": {
+            "attackPenalty": -2,
+            "savePenalty": -1,
+            "infravisionReduced": 30
+          }
+        }
+      ],
+      "classRestrictions": "Fighter, Magic-User, Cleric (of Lolth), Thief; Fighter/Magic-User, Fighter/Cleric, Cleric/Magic-User, Fighter/Thief, Magic-User/Thief, Fighter/Magic-User/Thief"
+    }
   },
   "effects": [],
   "folder": null,

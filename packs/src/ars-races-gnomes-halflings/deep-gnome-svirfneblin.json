@@ -15,7 +15,68 @@
       "cha": -2
     },
     "infravision": 120,
-    "requirements": "DM permission recommended; CON 8 minimum"
+    "requirements": "DM permission recommended; CON 8 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 20,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per level"
+        }
+      ],
+      "attackBonuses": [],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "grade or slope",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "unsafe walls, ceilings, and floors",
+          "dieSize": 10,
+          "successOn": 8
+        },
+        {
+          "ability": "approximate depth underground",
+          "dieSize": 6,
+          "successOn": 4
+        },
+        {
+          "ability": "approximate direction underground",
+          "dieSize": 6,
+          "successOn": 3
+        }
+      ],
+      "innateAbilities": [
+        {
+          "name": "Blindness",
+          "usesPerDay": 1
+        },
+        {
+          "name": "Blur",
+          "usesPerDay": 1
+        },
+        {
+          "name": "Change Self",
+          "usesPerDay": 1
+        }
+      ],
+      "specialAbilities": [
+        {
+          "name": "Nondetection",
+          "description": "Naturally difficult to locate via magical means; detect magic and similar spells require a saving throw to reveal svirfneblin."
+        },
+        {
+          "name": "Underground Stealth",
+          "description": "4-in-6 chance to move silently and hide in shadows in underground environments."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Illusionist, Thief; Fighter/Illusionist, Fighter/Thief, Illusionist/Thief. DM permission recommended."
+    }
   },
   "effects": [],
   "folder": null,

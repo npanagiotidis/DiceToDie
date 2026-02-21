@@ -1,5 +1,5 @@
-2026/02/21-15:33:51.883560 7f88cdbfd6c0 Delete type=3 #1
-2026/02/21-15:33:51.885907 7f88affff6c0 Level-0 table #5: started
-2026/02/21-15:33:51.887993 7f88affff6c0 Level-0 table #5: 8549 bytes OK
-2026/02/21-15:33:51.888619 7f88affff6c0 Delete type=0 #3
-2026/02/21-15:33:51.888689 7f88affff6c0 Manual compaction at level-0 from '!items!AquaticElfARSRac' @ 72057594037927935 : 1 .. '!items!WingedElfAvariel' @ 0 : 0; will stop at (end)
+2026/02/21-15:43:10.771118 7f3071fed6c0 Delete type=3 #1
+2026/02/21-15:43:10.773536 7f3053fff6c0 Level-0 table #5: started
+2026/02/21-15:43:10.774486 7f3053fff6c0 Level-0 table #5: 11462 bytes OK
+2026/02/21-15:43:10.775094 7f3053fff6c0 Delete type=0 #3
+2026/02/21-15:43:10.775163 7f3053fff6c0 Manual compaction at level-0 from '!items!AquaticElfARSRac' @ 72057594037927935 : 1 .. '!items!WingedElfAvariel' @ 0 : 0; will stop at (end)

@@ -15,7 +15,53 @@
       "cha": -1
     },
     "infravision": 60,
-    "requirements": "CON 8 minimum"
+    "requirements": "CON 8 minimum",
+    "racialTraits": {
+      "sleepImmunity": 90,
+      "charmSaveBonus": 2,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [
+        {
+          "vs": [
+            "long bow",
+            "long sword"
+          ],
+          "bonus": 1,
+          "note": "weapon proficiency bonus"
+        }
+      ],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Move Silently",
+          "description": "Exceptional woodland stealth; surprise opponents on 1–4 on a d6 in forests."
+        },
+        {
+          "name": "Woodland Invisibility",
+          "description": "Effectively invisible when motionless in natural surroundings."
+        },
+        {
+          "name": "Track",
+          "description": "Can track in wilderness as a ranger of half their level."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Magic-User (limited), Thief, Ranger; Fighter/Thief, Fighter/Magic-User, Magic-User/Thief, Fighter/Magic-User/Thief"
+    }
   },
   "effects": [],
   "folder": null,

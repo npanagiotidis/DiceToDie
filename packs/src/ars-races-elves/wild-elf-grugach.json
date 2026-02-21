@@ -15,7 +15,50 @@
       "cha": 0
     },
     "infravision": 60,
-    "requirements": "CON 8 minimum"
+    "requirements": "CON 8 minimum",
+    "racialTraits": {
+      "sleepImmunity": 90,
+      "charmSaveBonus": 2,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [
+        {
+          "vs": [
+            "spears",
+            "bows",
+            "knives"
+          ],
+          "bonus": 1,
+          "note": "weapon proficiency bonus — traditional wild elf weapons"
+        }
+      ],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Exceptional Stealth",
+          "description": "Masters of wilderness concealment; can effectively vanish even while moving in natural settings."
+        },
+        {
+          "name": "Track",
+          "description": "Can track as a ranger of their full level in wilderness terrain."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Thief; Fighter/Thief. Cannot be Magic-Users."
+    }
   },
   "effects": [],
   "folder": null,
