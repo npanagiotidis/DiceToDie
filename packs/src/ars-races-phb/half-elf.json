@@ -1,0 +1,58 @@
+{
+  "_id": "HalfElfARSRace1",
+  "name": "Half-Elf",
+  "type": "race",
+  "img": "icons/environment/wilderness/tree-oak.webp",
+  "system": {
+    "description": "<h2>Half-Elf</h2><p>Half-elves are the offspring of a human and an elf, combining the versatility of their human parentage with some of the grace and longevity of their elven heritage. They stand 5 to 5½ feet tall and are often taken for elves or humans at first glance. Half-elves often feel caught between two worlds, not fully accepted by either race.</p><h3>Ability Score Adjustments</h3><p>None — Half-elves have no racial ability score modifiers.</p><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Resistance to Sleep and Charm:</strong> 30% immunity to sleep spells and +1 bonus on saving throws vs. charm and hold spells.</li><li><strong>Detect Secret and Concealed Doors:</strong> Half-elves have a 1-in-6 chance of noticing secret or concealed doors within 10 feet passively, 2-in-6 when actively searching, 3-in-6 for merely concealed doors.</li><li><strong>Woodland Affinity:</strong> Half-elves retain some of the elven affinity for natural environments.</li></ul><h3>Class Restrictions</h3><p>Fighter, Magic-User, Cleric, Thief, Ranger, Druid; various multiclass combinations including Fighter/Magic-User, Fighter/Thief, Cleric/Fighter, Cleric/Ranger, Cleric/Magic-User, Thief/Magic-User, Cleric/Fighter/Magic-User, Fighter/Magic-User/Thief, and Fighter/Magic-User/Cleric.</p>",
+    "source": "Player's Handbook (2nd Edition)",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 0,
+      "con": 0,
+      "int": 0,
+      "wis": 0,
+      "cha": 0
+    },
+    "infravision": 60,
+    "requirements": "None",
+    "racialTraits": {
+      "sleepImmunity": 30,
+      "charmSaveBonus": 1,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        },
+        {
+          "ability": "concealed doors (active search)",
+          "dieSize": 6,
+          "successOn": 3
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Woodland Affinity",
+          "description": "Half-elves retain some of the elven affinity for natural environments."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Magic-User, Cleric, Thief, Ranger, Druid; Fighter/Magic-User, Fighter/Thief, Cleric/Fighter, Cleric/Ranger, Cleric/Magic-User, Thief/Magic-User, Cleric/Fighter/Magic-User, Fighter/Magic-User/Thief, Fighter/Magic-User/Cleric"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!HalfElfARSRace1"
+}

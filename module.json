@@ -1,8 +1,8 @@
 {
   "id": "dice-to-die",
-  "title": "DiceToDie - Ability Score Generator",
-  "description": "A module to generate and assign ability scores using the 4d6 drop lowest method for ARS/OSRIC systems.",
-  "version": "1.0.0",
+  "title": "DiceToDie - Ability Score Generator & ARS Races Compendium",
+  "description": "A module for ARS/OSRIC systems that generates ability scores using the 4d6 drop lowest method and provides a compendium of races drawn from AD&D 2nd Edition sourcebooks.",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Your Name",
@@ -17,6 +17,52 @@
   ],
   "styles": [
     "styles/ability-roller.css"
+  ],
+  "packs": [
+    {
+      "name": "ars-races-phb",
+      "label": "ARS Races – Player's Handbook (2nd Edition)",
+      "path": "packs/ars-races-phb",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ars-races-elves",
+      "label": "ARS Races – The Complete Book of Elves",
+      "path": "packs/ars-races-elves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ars-races-dwarves",
+      "label": "ARS Races – The Complete Book of Dwarves",
+      "path": "packs/ars-races-dwarves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ars-races-gnomes-halflings",
+      "label": "ARS Races – The Complete Book of Gnomes & Halflings",
+      "path": "packs/ars-races-gnomes-halflings",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
   ],
   "compatibility": {
     "minimum": "11",
