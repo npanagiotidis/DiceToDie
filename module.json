@@ -1,25 +1,37 @@
 {
   "id": "dice-to-die",
-  "title": "DiceToDie - Ability Score Generator",
-  "description": "A module to generate and assign ability scores using the 4d6 drop lowest method for ARS/OSRIC systems.",
-  "version": "1.0.0",
+  "title": "DiceToDie – AD&D 2e Rules Overlay",
+  "description": "Faithful AD&D 2e implementation for Foundry VTT / ARS: THAC0 system, 5 saving throw categories, multi-class rules, weapon speed factor, casting time, initiative, proficiencies, and the full spell memorization system.",
+  "version": "2.0.0",
   "authors": [
     {
-      "name": "Your Name",
-      "url": "https://github.com/npanagiotidishello"
+      "name": "npanagiotidis",
+      "url": "https://github.com/npanagiotidis"
     }
   ],
-  "url": "https://github.com/npanagiotidishello/DiceToDie",
-  "bugs": "https://github.com/npanagiotidishello/DiceToDie/issues",
-  "changelog": "https://github.com/npanagiotidishello/DiceToDie/releases",
+  "url": "https://github.com/npanagiotidis/DiceToDie",
+  "bugs": "https://github.com/npanagiotidis/DiceToDie/issues",
+  "changelog": "https://github.com/npanagiotidis/DiceToDie/releases",
   "scripts": [
-    "scripts/ability-score-roller.js"
+    "scripts/data/thac0-tables.js",
+    "scripts/data/save-tables.js",
+    "scripts/data/class-data.js",
+    "scripts/data/racial-data.js",
+    "scripts/thac0.js",
+    "scripts/saving-throws.js",
+    "scripts/combat.js",
+    "scripts/initiative.js",
+    "scripts/proficiencies.js",
+    "scripts/spells.js",
+    "scripts/ability-score-roller.js",
+    "scripts/dice-to-die.js"
   ],
   "styles": [
-    "styles/ability-roller.css"
+    "styles/ability-roller.css",
+    "styles/adnd2e.css"
   ],
   "compatibility": {
-    "minimum": "11",
+    "minimum": "12",
     "verified": "13"
   }
 }

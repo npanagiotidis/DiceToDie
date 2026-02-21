@@ -1,47 +1,135 @@
-# DiceToDie - Ability Score Generator
+# DiceToDie – AD&D 2e Rules Overlay
 
-A Foundry VTT module for ARS/OSRIC systems that generates and assigns ability scores using the classic 4d6 drop lowest method.
+A Foundry VTT module that implements faithful **AD&D 2e** rules as an overlay for the **ARS** game system.
 
 ## Features
 
-✨ **Easy to Use**
-- Click the 🎲 dice button in the left toolbar to generate ability scores
-- Two roll sets displayed side-by-side for comparison
-- Shows individual dice rolls and dropped die for each ability
+### 🗡️ THAC0 System
+- Per-class progression tables (Warrior, Priest, Rogue, Wizard groups) from the PHB
+- Multi-class support: best (lowest) THAC0 across all classes
+- Manual THAC0 adjustment flag
+- Auto-recalculates when class or level changes
+- Attack resolution: **d20 ≥ THAC0 − Target AC** (descending AC, −10 to 10)
 
-🎯 **Smart Selection**
-- Compare two different 4d6 drop lowest rolls
-- Choose which set works best for your character concept
-- Scores are automatically applied to all six abilities (STR, DEX, CON, INT, WIS, CHA)
+### 🛡️ Saving Throws (5 Categories)
+- Paralyzation / Poison / Death
+- Rod / Staff / Wand
+- Petrification / Polymorph
+- Breath Weapon
+- Spell
+- Multi-class: best value per category; racial CON bonuses applied automatically
 
-📊 **Clear Display**
-- Color-coded roll sets (green for Roll Set 1, blue for Roll Set 2)
-- Individual dice breakdown showing kept and dropped dice
-- Automatic confirmation when scores are applied
+### ⚔️ Combat Engine
+- Full attack automation: d20 roll → hit resolution → damage dice roll
+- Non-proficiency penalties by class group
+- Fighter weapon specialization (+1 attack / +2 damage)
+- Chat messages with THAC0 vs AC breakdown
 
-## How to Use
+### 🎲 Initiative (Manual Roll, Auto-Computed)
+- Base d10 (lower = acts first)
+- Weapon speed factor and spell casting time added to roll
+- Spell interruption: flagged automatically when caster takes damage before casting
 
-1. **Enable the Module**: Go to Settings → Manage Modules and enable "DiceToDie - Ability Score Generator"
-2. **Open a Character Sheet**: Open any ARS/OSRIC character sheet
-3. **Click the Dice Button**: Look for the 🎲 dice icon in the left toolbar
-4. **Choose Your Rolls**: Compare the two generated roll sets and click "Select Roll 1" or "Select Roll 2"
-5. **Done**: Your ability scores are automatically updated!
+### 📜 Proficiency System
+- Weapon and non-weapon proficiency slot tracking per class/level
+- Non-weapon proficiency checks: `d20 ≤ ability score ± modifier`
+- Fighter weapon specialization
 
-## Technical Details
+### ✨ Magic System
+- Spell objects: level, school, sphere, casting time, components, duration, range, saving throw
+- Wizard specialization: prohibited schools, bonus spell slots
+- Priest sphere access (major/minor)
+- Memorize-and-forget model; no spontaneous casting
 
-- **Method**: 4d6 drop lowest (rolls 4d6, drops the lowest die, sums the remaining 3)
-- **Compatibility**: Foundry VTT 11+ (verified on 13)
-- **System**: ARS/OSRIC
-- **License**: MIT
-
-## Version History
-
-### v1.0.0
-- Initial release
-- 4d6 drop lowest ability score generation
-- Two roll comparison interface
-- Automatic character sheet updates
+### 🎯 Ability Score Generator (Original Feature)
+- 4d6 drop lowest, two sets for comparison
+- Automatic application to the open character sheet
 
 ---
 
-Created with 🎲 for tabletop RPG enthusiasts
+## How to Use
+
+### Enable the Module
+Go to **Settings → Manage Modules** and enable **DiceToDie – AD&D 2e Rules Overlay**.
+
+### Configure a Character (Macro or Console)
+```js
+// Single class
+await DiceToDie.setupCharacter(actor, { className: "fighter", level: 5, race: "human" });
+
+// Multi-class
+await DiceToDie.setupMultiClass(actor, [
+  { className: "fighter", level: 5, xp: 16000 },
+  { className: "mage",    level: 4, xp: 10000 }
+], "halfElf");
+```
+
+### Roll an Attack
+```js
+const result = await DiceToDie.combat.attack(attacker, targetAC, {
+  damage: "1d8+2",
+  attackBonus: 1,
+  name: "Long Sword +1"
+});
+await DiceToDie.combat.toChat(attacker, result);
+```
+
+### Roll a Saving Throw
+```js
+const save = await DiceToDie.savingThrows.rollSave(actor, "spell");
+// categories: "ppd", "rsw", "pp", "bw", "spell"
+```
+
+### Roll Initiative
+```js
+const init = await DiceToDie.initiative.roll(actor, {
+  speedFactor: 5,   // weapon speed factor
+  castingTime: 0    // or >0 for a spell
+});
+await DiceToDie.initiative.toChat(actor, init);
+```
+
+### Proficiency Check
+```js
+const check = await DiceToDie.proficiencies.rollNonWeaponCheck(actor, "wis", -2);
+```
+
+### Memorize / Cast a Spell
+```js
+const spell = DiceToDie.spells.createSpell({
+  name: "Magic Missile", level: 1, school: "invocation",
+  castingTime: 1, components: "VS", duration: "Instantaneous",
+  range: "60 yards + 10 yards/level", savingThrow: "None"
+});
+await DiceToDie.spells.memorizeSpell(actor, spell);
+```
+
+---
+
+## Automation Boundaries
+
+| Feature | Automated |
+|---------|-----------|
+| THAC0 update on level/class change | ✅ Auto |
+| Saving throw update on level/class/race change | ✅ Auto |
+| Attack d20 roll | ✅ Auto |
+| Damage dice roll | ✅ Auto |
+| Initiative roll | 🎲 Manual (macro/button) |
+| Reaction checks | 🎲 Manual |
+| Spell interruption check | 🔔 Auto-flagged on damage |
+
+---
+
+## Compatibility
+
+- Foundry VTT 12–13
+- ARS system (latest)
+
+## Version History
+
+See [CHANGELOG.md](CHANGELOG.md).
+
+---
+
+Created with 🎲 for faithful AD&D 2e roleplay
+
