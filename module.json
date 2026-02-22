@@ -6,12 +6,12 @@
   "authors": [
     {
       "name": "Your Name",
-      "url": "https://github.com/npanagiotidishello"
+      "url": "https://github.com/npanagiotidis"
     }
   ],
-  "url": "https://github.com/npanagiotidishello/DiceToDie",
-  "bugs": "https://github.com/npanagiotidishello/DiceToDie/issues",
-  "changelog": "https://github.com/npanagiotidishello/DiceToDie/releases",
+  "url": "https://github.com/npanagiotidis/DiceToDie",
+  "bugs": "https://github.com/npanagiotidis/DiceToDie/issues",
+  "changelog": "https://github.com/npanagiotidis/DiceToDie/releases",
   "scripts": [
     "scripts/ability-score-roller.js"
   ],
@@ -19,7 +19,7 @@
     "styles/ability-roller.css"
   ],
   "compatibility": {
-    "minimum": "11",
+    "minimum": "13",
     "verified": "13"
   }
 }

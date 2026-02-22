@@ -19,6 +19,16 @@ A Foundry VTT module for ARS/OSRIC systems that generates and assigns ability sc
 - Individual dice breakdown showing kept and dropped dice
 - Automatic confirmation when scores are applied
 
+## Installation
+
+1. In Foundry VTT, go to **Add-on Modules** and click **Install Module**.
+2. Paste the following manifest URL and click **Install**:
+   ```
+   https://raw.githubusercontent.com/npanagiotidis/DiceToDie/main/module.json
+   ```
+   Alternatively, copy/extract the module folder into your `Data/modules` directory so that `module.json` is at `Data/modules/dice-to-die/module.json`.
+3. Enable the module in your world via **Settings → Manage Modules**.
+
 ## How to Use
 
 1. **Enable the Module**: Go to Settings → Manage Modules and enable "DiceToDie - Ability Score Generator"
@@ -30,7 +40,7 @@ A Foundry VTT module for ARS/OSRIC systems that generates and assigns ability sc
 ## Technical Details
 
 - **Method**: 4d6 drop lowest (rolls 4d6, drops the lowest die, sums the remaining 3)
-- **Compatibility**: Foundry VTT 11+ (verified on 13)
+- **Compatibility**: Foundry VTT 13+
 - **System**: ARS/OSRIC
 - **License**: MIT
 
