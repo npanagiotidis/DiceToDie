@@ -46,6 +46,11 @@ class ADND2eRaceApplication {
     const name    = raceItem.name ?? sys.name ?? "Unknown";
     const origin  = raceItem.uuid ?? "";
 
+    /* Guard: skip if this exact race is already applied (prevents double-application
+       when both preCreateItem and system.details.race update fire together). */
+    const existing = ADND2eRaceApplication.getAppliedRaceData(actor);
+    if (existing?.name === name) return;
+
     /* 1. Undo any previously applied race (scores + AEs) */
     await ADND2eRaceApplication._undoPreviousRace(actor);
 
@@ -114,6 +119,74 @@ class ADND2eRaceApplication {
     ui.notifications.info(
       `DiceToDie: Racial traits removed from ${actor.name}.`
     );
+  }
+
+  /**
+   * Look up a race by name across all DiceToDie compendium packs and apply
+   * it to the actor.  Called automatically when the actor's
+   * system.details.race field changes (e.g. typed in the ARS character
+   * sheet's Race input).
+   *
+   * If no compendium entry is found the actor's saving throws are still
+   * recalculated using the built-in table (for common PHB races).
+   * Passing an empty / falsy raceName removes any applied race data.
+   *
+   * @param {Actor} actor
+   * @param {string} raceName  - e.g. "Elf", "High Elf", "Drow", ""
+   * @returns {Promise<boolean>} true if a compendium match was applied
+   */
+  static async applyRaceFromName(actor, raceName) {
+    /* Empty name → remove race */
+    if (!raceName || !raceName.trim()) {
+      await ADND2eRaceApplication.removeRaceFromActor(actor);
+      return false;
+    }
+
+    /** Normalise for fuzzy matching: lowercase, strip spaces/punctuation. */
+    const normalise = s => s.toLowerCase().replace(/[\s()'\-]+/g, "");
+    const target    = normalise(raceName);
+
+    /* Guard: already applied, nothing to do */
+    const existing = ADND2eRaceApplication.getAppliedRaceData(actor);
+    if (existing && normalise(existing.name) === target) {
+      await ADND2eSavingThrows.updateActorSaves(actor);
+      return true;
+    }
+
+    const PACK_IDS = [
+      "dice-to-die.ars-races-phb",
+      "dice-to-die.ars-races-elves",
+      "dice-to-die.ars-races-dwarves",
+      "dice-to-die.ars-races-gnomes-halflings"
+    ];
+
+    for (const packId of PACK_IDS) {
+      const pack = game.packs?.get(packId);
+      if (!pack) continue;
+
+      const index = await pack.getIndex();
+      /* Fuzzy match: exact → starts-with → contains */
+      const entry = index.find(e => normalise(e.name) === target) ??
+                    index.find(e => normalise(e.name).startsWith(target)) ??
+                    index.find(e => target.startsWith(normalise(e.name))) ??
+                    index.find(e => normalise(e.name).includes(target));
+
+      if (entry) {
+        const document = await pack.getDocument(entry._id);
+        if (document) {
+          await ADND2eRaceApplication.applyRaceToActor(actor, document);
+          return true;
+        }
+      }
+    }
+
+    /* Fallback: no compendium match; still refresh saves from built-in table */
+    ui.notifications?.warn(
+      `DiceToDie: No compendium entry found for race "${raceName}". ` +
+      `Saving throws recalculated from built-in table.`
+    );
+    await ADND2eSavingThrows.updateActorSaves(actor);
+    return false;
   }
 
   /**

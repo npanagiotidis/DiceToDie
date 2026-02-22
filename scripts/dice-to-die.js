@@ -112,12 +112,32 @@ Hooks.once("init", () => {
 
 /* ── Automation Hooks ──────────────────────────────────────────────── */
 
+/**
+ * Module-level set used as a re-entrancy guard so that updating
+ * system.details.race (triggered by applyRaceToActor) does not cause
+ * applyRaceFromName to fire a second time for the same actor.
+ * @type {Set<string>}
+ */
+const _ADND_RACE_LOCK = new Set();
+
 Hooks.on("updateActor", async (actor, changes) => {
-  /* Trigger recalculation only when relevant fields change */
+  /* ── Race field change: look up compendium and apply traits ──────── */
+  if (foundry.utils.hasProperty(changes, "system.details.race") &&
+      !_ADND_RACE_LOCK.has(actor.id)) {
+    const raceName = foundry.utils.getProperty(actor, "system.details.race") ?? "";
+    _ADND_RACE_LOCK.add(actor.id);
+    try {
+      await ADND2eRaceApplication.applyRaceFromName(actor, raceName);
+    } finally {
+      _ADND_RACE_LOCK.delete(actor.id);
+    }
+    return; /* applyRaceFromName already calls updateActorSaves internally */
+  }
+
+  /* ── Class/level/race-flag change: recalculate THAC0 + saves ─────── */
   const relevantChange =
     foundry.utils.hasProperty(changes, "system.details.class")  ||
     foundry.utils.hasProperty(changes, "system.details.level")  ||
-    foundry.utils.hasProperty(changes, "system.details.race")   ||
     foundry.utils.hasProperty(changes, "system.attributes.level") ||
     foundry.utils.hasProperty(changes, "flags.dice-to-die.className") ||
     foundry.utils.hasProperty(changes, "flags.dice-to-die.level")     ||
@@ -137,28 +157,43 @@ Hooks.on("updateActor", async (actor, changes) => {
 /* ── Race Item Hooks ───────────────────────────────────────────────── */
 
 /**
- * When a race Item is embedded in (dropped onto) an actor, apply the
- * racial ability modifiers and traits to that actor automatically.
+ * Intercept race Items being dropped onto an actor BEFORE they are
+ * created as embedded documents.  The ARS system does not define a
+ * "race" item type and would show "can't find it in inventory" if the
+ * item were created normally.
+ *
+ * Instead we:
+ *   1. Return false to CANCEL the item-creation (no inventory entry).
+ *   2. Fire applyRaceToActor asynchronously so racial traits are applied.
+ *
+ * Note: Foundry's preCreate hooks are called via Hooks.call() which is
+ * synchronous, so async work must be started as a fire-and-forget.
  */
-Hooks.on("createItem", async (item, _options, _userId) => {
-  /* Only act on race Items that are owned by an actor */
+Hooks.on("preCreateItem", (item, _data, _options, _userId) => {
   if (item.type !== "race" || !item.parent || item.parent.documentName !== "Actor") return;
 
-  /* Only run for the GM or the actor's owner to avoid double-application */
-  const isOwner = item.parent.ownership[game.user.id] === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
-  if (!(game.user.isGM || isOwner)) return;
+  const actor   = item.parent;
+  const isOwner = actor.ownership?.[game.user?.id] === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
+  if (!(game.user?.isGM || isOwner)) return;
 
-  await ADND2eRaceApplication.applyRaceToActor(item.parent, item);
+  /* Apply race traits in the background; do NOT await (pre-hook is sync) */
+  ADND2eRaceApplication.applyRaceToActor(actor, item).catch(err =>
+    console.error("DiceToDie | Error applying race from drop:", err)
+  );
+
+  return false; /* Cancel item creation – race never appears in inventory */
 });
 
 /**
- * When a race Item is removed from an actor, reverse the racial modifiers.
+ * Fallback: if a race item already exists as an embedded document (e.g.
+ * pre-existing data or created via macro), remove racial traits when it
+ * is deleted.
  */
 Hooks.on("deleteItem", async (item, _options, _userId) => {
   if (item.type !== "race" || !item.parent || item.parent.documentName !== "Actor") return;
 
-  const isOwner = item.parent.ownership[game.user.id] === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
-  if (!(game.user.isGM || isOwner)) return;
+  const isOwner = item.parent.ownership?.[game.user?.id] === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
+  if (!(game.user?.isGM || isOwner)) return;
 
   await ADND2eRaceApplication.removeRaceFromActor(item.parent);
 });
