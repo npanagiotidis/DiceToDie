@@ -39,6 +39,7 @@
       "label": "ARS Races – Player's Handbook (2nd Edition)",
       "path": "packs/ars-races-phb",
       "type": "Item",
+      "system": "ars",
       "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" },
       "flags": {}
     },
@@ -47,6 +48,7 @@
       "label": "ARS Races – The Complete Book of Elves",
       "path": "packs/ars-races-elves",
       "type": "Item",
+      "system": "ars",
       "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" },
       "flags": {}
     },
@@ -55,6 +57,7 @@
       "label": "ARS Races – The Complete Book of Dwarves",
       "path": "packs/ars-races-dwarves",
       "type": "Item",
+      "system": "ars",
       "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" },
       "flags": {}
     },
@@ -63,6 +66,7 @@
       "label": "ARS Races – The Complete Book of Gnomes & Halflings",
       "path": "packs/ars-races-gnomes-halflings",
       "type": "Item",
+      "system": "ars",
       "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" },
       "flags": {}
     }
