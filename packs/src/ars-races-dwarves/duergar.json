@@ -1,0 +1,117 @@
+{
+  "_id": "DuergarGrayDwarf",
+  "name": "Duergar (Gray Dwarf)",
+  "type": "race",
+  "img": "icons/environment/settlement/cave.webp",
+  "system": {
+    "description": "<h2>Duergar (Gray Dwarf)</h2><p>The duergar, or gray dwarves, are a subrace of dwarves corrupted long ago by mind flayer enslavement in the Underdark. They are pale-skinned with bald heads or iron-grey hair, sunken eyes, and a permanent expression of grim suspicion. Duergar have developed potent innate psionic abilities during their long servitude and retain a deep hatred for mind flayers. They are joyless, cruel, and usually lawful evil in alignment, building harsh slave-holding societies in the deep places of the world.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Constitution:</strong> +1</li><li><strong>Charisma:</strong> −2</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 90 feet.</li><li><strong>Innate Spell-like Abilities:</strong> Once per day — <em>enlarge</em> (self only, usable at 3rd level) and <em>invisibility</em> (self only, usable at 5th level).</li><li><strong>Magic Resistance:</strong> Duergar have a 20% resistance to magic spells. This increases with level.</li><li><strong>Detect Stonework:</strong> Superior to mountain dwarves; detect grade on 1–5 in d6; traps on 1–4; depth underground on 1–4.</li><li><strong>Attack Bonus:</strong> +1 to attack rolls vs. orcs, half-orcs, goblins, and hobgoblins.</li><li><strong>Defensive Bonus:</strong> −4 AC vs. giants, ogres, trolls, ogre magi, and titans.</li><li><strong>Saving Throw Bonus:</strong> +1 per 3.5 points of Constitution vs. magic and poison.</li><li><strong>Light Sensitivity:</strong> Duergar suffer a −2 penalty to attack rolls and saving throws in bright sunlight or the area of a <em>continual light</em> spell.</li><li><strong>Psionics:</strong> Duergar possess psionic abilities at the DM's discretion.</li></ul><h3>Class Restrictions</h3><p>Fighter, Thief; Fighter/Thief multiclass. Usually NPC or with DM permission only.</p>",
+    "source": "The Complete Book of Dwarves",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 0,
+      "con": 1,
+      "int": 0,
+      "wis": 0,
+      "cha": -2
+    },
+    "infravision": 90,
+    "requirements": "DM permission required; CON 12 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 20,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per 3.5 CON"
+        },
+        {
+          "vs": "poison",
+          "bonus": "+1 per 3.5 CON"
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "orcs",
+            "half-orcs",
+            "goblins",
+            "hobgoblins"
+          ],
+          "bonus": 1
+        }
+      ],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "giants",
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "grade or slope",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "new tunnel/passage construction",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "sliding/shifting walls",
+          "dieSize": 6,
+          "successOn": 4
+        },
+        {
+          "ability": "stonework traps",
+          "dieSize": 6,
+          "successOn": 4
+        },
+        {
+          "ability": "approximate depth underground",
+          "dieSize": 6,
+          "successOn": 4
+        }
+      ],
+      "innateAbilities": [
+        {
+          "name": "Enlarge (self only)",
+          "usesPerDay": 1,
+          "minLevel": 3
+        },
+        {
+          "name": "Invisibility (self only)",
+          "usesPerDay": 1,
+          "minLevel": 5
+        }
+      ],
+      "specialAbilities": [
+        {
+          "name": "Duergar Magic Resistance",
+          "description": "Base 20% magic resistance that increases with level."
+        }
+      ],
+      "penalties": [
+        {
+          "condition": "bright sunlight or continual light",
+          "effects": {
+            "attackPenalty": -2,
+            "savePenalty": -2
+          }
+        }
+      ],
+      "classRestrictions": "Fighter, Thief; Fighter/Thief. Usually NPC or DM permission only."
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!DuergarGrayDwarf"
+}

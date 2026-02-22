@@ -1,0 +1,67 @@
+{
+  "_id": "WildElfGrugachAR",
+  "name": "Wild Elf (Grugach)",
+  "type": "race",
+  "img": "icons/environment/wilderness/forest-clearing.webp",
+  "system": {
+    "description": "<h2>Wild Elf (Grugach)</h2><p>Wild elves, also known as the Grugach, are the most primitive and isolationist of all elven subraces. They reject civilization entirely and live as hunter-gatherers in the deepest and most impenetrable wilderness. Their skin is a dark golden-brown, their hair ranges from pale blond to dark brown, and their eyes are typically green. Wild elves are extremely xenophobic, attacking strangers on sight more often than not. They have no written language and pass down their lore through oral tradition and song.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Strength:</strong> +1</li><li><strong>Dexterity:</strong> +1</li><li><strong>Intelligence:</strong> −2</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Resistance to Sleep and Charm:</strong> 90% immunity to sleep spells and +2 bonus on saving throws vs. charm and hold spells.</li><li><strong>Detect Secret and Concealed Doors:</strong> 1-in-6 passively, 2-in-6 when actively searching.</li><li><strong>Exceptional Stealth:</strong> Wild elves are masters of wilderness concealment. In natural settings, they can effectively vanish from sight even when moving.</li><li><strong>Weapon Proficiency Bonus:</strong> +1 to attack rolls with spears, bows, and knives — traditional weapons of wild elf hunters.</li><li><strong>Track:</strong> Wild elves can track as a ranger of their level in wilderness terrain.</li><li><strong>Class Restriction:</strong> Wild elves do not become magic-users or illusionists; they have no access to written spellbooks.</li></ul><h3>Class Restrictions</h3><p>Fighter, Thief; Fighter/Thief multiclass. Wild elves cannot be Magic-Users.</p>",
+    "source": "The Complete Book of Elves",
+    "abilityModifiers": {
+      "str": 1,
+      "dex": 1,
+      "con": 0,
+      "int": -2,
+      "wis": 0,
+      "cha": 0
+    },
+    "infravision": 60,
+    "requirements": "CON 8 minimum",
+    "racialTraits": {
+      "sleepImmunity": 90,
+      "charmSaveBonus": 2,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [
+        {
+          "vs": [
+            "spears",
+            "bows",
+            "knives"
+          ],
+          "bonus": 1,
+          "note": "weapon proficiency bonus — traditional wild elf weapons"
+        }
+      ],
+      "defensiveBonuses": [],
+      "detectAbilities": [
+        {
+          "ability": "secret doors (passive, within 10 ft)",
+          "dieSize": 6,
+          "successOn": 1
+        },
+        {
+          "ability": "secret doors (active search)",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Exceptional Stealth",
+          "description": "Masters of wilderness concealment; can effectively vanish even while moving in natural settings."
+        },
+        {
+          "name": "Track",
+          "description": "Can track as a ranger of their full level in wilderness terrain."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Thief; Fighter/Thief. Cannot be Magic-Users."
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!WildElfGrugachAR"
+}

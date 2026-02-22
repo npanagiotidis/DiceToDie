@@ -1,0 +1,71 @@
+{
+  "_id": "SprigganARSRace1",
+  "name": "Spriggan",
+  "type": "race",
+  "img": "icons/environment/wilderness/tree-dark.webp",
+  "system": {
+    "description": "<h2>Spriggan</h2><p>Spriggans are an unpleasant and feared variety of gnome. In their natural form they are small and wizened, appearing as ugly, stunted gnomes with overlarge heads, beady black eyes, and a permanently sour expression. Their most remarkable — and terrifying — ability is to enlarge themselves to giant proportions, transforming from a tiny nuisance into a formidable warrior in moments. Spriggans dwell in ruins, barrows, and the abandoned strongholds of other races, which they guard jealously and fill with traps and stolen treasure. They are generally neutral evil, motivated primarily by greed and spite.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Dexterity:</strong> +1</li><li><strong>Charisma:</strong> −2</li></ul><h3>Racial Traits</h3><ul><li><strong>Enlarge Self:</strong> Once per day, a spriggan can enlarge to large size (treat as <em>enlarge</em> spell, self only). In enlarged form, the spriggan gains +4 Strength and +2 Constitution but suffers −2 Dexterity. This lasts for 1 turn per level.</li><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Thieving Aptitude:</strong> Spriggans receive bonuses to Pick Pockets and Move Silently thief skills equivalent to a thief two levels higher.</li><li><strong>Detect Traps:</strong> Spriggans can detect traps on 1–4 on a d6 due to their love of setting and finding traps.</li><li><strong>Saving Throw Bonus:</strong> +1 per level vs. magic spells.</li><li><strong>Defensive Bonus:</strong> −4 AC vs. ogres, trolls, ogre magi, giants, and titans in normal (small) form.</li></ul><h3>Class Restrictions</h3><p>Fighter, Thief; Fighter/Thief multiclass. Generally NPC or with DM permission for player characters.</p>",
+    "source": "The Complete Book of Gnomes & Halflings",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 1,
+      "con": 0,
+      "int": 0,
+      "wis": 0,
+      "cha": -2
+    },
+    "infravision": 60,
+    "requirements": "Usually NPC; DM permission for player characters",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per level (minimum +1)"
+        }
+      ],
+      "attackBonuses": [],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "giants",
+            "titans"
+          ],
+          "acBonus": -4,
+          "note": "in normal (small) form only"
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "traps (due to love of setting/finding traps)",
+          "dieSize": 6,
+          "successOn": 4
+        }
+      ],
+      "innateAbilities": [
+        {
+          "name": "Enlarge (self only)",
+          "usesPerDay": 1,
+          "note": "+4 STR, +2 CON, -2 DEX; lasts 1 turn per level"
+        }
+      ],
+      "specialAbilities": [
+        {
+          "name": "Thieving Aptitude",
+          "description": "Bonuses to Pick Pockets and Move Silently equivalent to a thief two levels higher."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Thief; Fighter/Thief. Generally NPC or DM permission."
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!SprigganARSRace1"
+}

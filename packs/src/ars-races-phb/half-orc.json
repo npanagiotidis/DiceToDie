@@ -1,0 +1,42 @@
+{
+  "_id": "HalfOrcARSRace1",
+  "name": "Half-Orc",
+  "type": "race",
+  "img": "icons/environment/wilderness/cave-mountain.webp",
+  "system": {
+    "description": "<h2>Half-Orc</h2><p>Half-orcs are the offspring of humans and orcs, inheriting the strength and endurance of their orc heritage alongside the intelligence and adaptability of their human side. They average 5½ to 6 feet in height and have a somewhat brutish appearance. Half-orcs are often viewed with suspicion, particularly in civilized areas.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Strength:</strong> +1</li><li><strong>Constitution:</strong> +1</li><li><strong>Charisma:</strong> −2</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Pass for Human:</strong> A half-orc with Charisma 13 or higher and an average or better appearance can often pass for human in dim lighting or from a distance.</li></ul><h3>Class Restrictions</h3><p>Fighter, Cleric, Thief, Assassin; Fighter/Cleric, Fighter/Thief, Cleric/Thief, Cleric/Assassin, Fighter/Cleric/Thief, Fighter/Assassin multiclass.</p>",
+    "source": "Player's Handbook (2nd Edition)",
+    "abilityModifiers": {
+      "str": 1,
+      "dex": 0,
+      "con": 1,
+      "int": 0,
+      "wis": 0,
+      "cha": -2
+    },
+    "infravision": 60,
+    "requirements": "None",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [],
+      "attackBonuses": [],
+      "defensiveBonuses": [],
+      "detectAbilities": [],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Pass for Human",
+          "description": "A half-orc with CHA 13+ may pass for human in dim lighting or at distance."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Cleric, Thief, Assassin; Fighter/Cleric, Fighter/Thief, Cleric/Thief, Cleric/Assassin, Fighter/Cleric/Thief, Fighter/Assassin"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!HalfOrcARSRace1"
+}
