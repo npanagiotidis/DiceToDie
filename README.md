@@ -2,6 +2,35 @@
 
 A Foundry VTT module that implements faithful **AD&D 2e** rules as an overlay for the **ARS** game system.
 
+## Installation
+
+### Method 1 – Foundry Module Manager (recommended)
+
+1. Open Foundry VTT and go to **Configuration → Add-on Modules**
+2. Click **Install Module**
+3. Paste this manifest URL in the **Manifest URL** field at the bottom:
+   ```
+   https://raw.githubusercontent.com/npanagiotidis/DiceToDie/main/module.json
+   ```
+4. Click **Install**
+
+### Method 2 – Manual Installation
+
+1. Download the latest `module.zip` from the [Releases page](https://github.com/npanagiotidis/DiceToDie/releases)
+2. Unzip it into your Foundry **modules** folder so the path looks like:
+   ```
+   <Foundry Data>/modules/dice-to-die/module.json
+   ```
+   (On Linux this is typically `~/.local/share/FoundryVTT/Data/modules/dice-to-die/`)
+3. Restart Foundry VTT and enable the module under **Configuration → Add-on Modules**
+
+### Compatibility
+
+| Foundry VTT | Status |
+|---|---|
+| v13 | ✅ Verified |
+| v12 | ✅ Supported |
+
 ## Features
 
 ### 🗡️ THAC0 System

@@ -1,0 +1,54 @@
+name: Release Module
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Update version in module.json
+        run: |
+          jq --arg ver "${{ steps.version.outputs.VERSION }}" \
+             --arg dl  "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/module.zip" \
+             '.version = $ver | .download = $dl' \
+             module.json > module.tmp.json
+          mv module.tmp.json module.json
+
+      - name: Build module zip
+        run: |
+          zip -r module.zip \
+            module.json \
+            scripts/ \
+            styles/ \
+            templates/ \
+            README.md \
+            CHANGELOG.md \
+            --exclude "*.git*"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: module.zip
+          body: |
+            ## DiceToDie v${{ steps.version.outputs.VERSION }}
+
+            ### Install in Foundry VTT
+            Paste this URL in **Configuration → Add-on Modules → Install Module**:
+            ```
+            https://raw.githubusercontent.com/${{ github.repository }}/main/module.json
+            ```
+
+            See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for what's new.
