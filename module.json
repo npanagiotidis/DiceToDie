@@ -2,7 +2,7 @@
   "id": "dice-to-die",
   "title": "DiceToDie – AD&D 2e Rules Overlay",
   "description": "Faithful AD&D 2e implementation for Foundry VTT / ARS: THAC0 system, 5 saving throw categories, multi-class rules, weapon speed factor, casting time, initiative, proficiencies, and the full spell memorization system.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "authors": [
     {
       "name": "npanagiotidis",
@@ -32,6 +32,40 @@
   "styles": [
     "styles/ability-roller.css",
     "styles/adnd2e.css"
+  ],
+  "packs": [
+    {
+      "name": "ars-races-phb",
+      "label": "ARS Races – Player's Handbook (2nd Edition)",
+      "path": "packs/ars-races-phb",
+      "type": "Item",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" },
+      "flags": {}
+    },
+    {
+      "name": "ars-races-elves",
+      "label": "ARS Races – The Complete Book of Elves",
+      "path": "packs/ars-races-elves",
+      "type": "Item",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" },
+      "flags": {}
+    },
+    {
+      "name": "ars-races-dwarves",
+      "label": "ARS Races – The Complete Book of Dwarves",
+      "path": "packs/ars-races-dwarves",
+      "type": "Item",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" },
+      "flags": {}
+    },
+    {
+      "name": "ars-races-gnomes-halflings",
+      "label": "ARS Races – The Complete Book of Gnomes & Halflings",
+      "path": "packs/ars-races-gnomes-halflings",
+      "type": "Item",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" },
+      "flags": {}
+    }
   ],
   "compatibility": {
     "minimum": "12",

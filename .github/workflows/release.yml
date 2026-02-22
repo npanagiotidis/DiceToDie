@@ -33,12 +33,15 @@ jobs:
         run: |
           zip -r module.zip \
             module.json \
+            package.json \
             scripts/ \
             styles/ \
             templates/ \
+            packs/ \
             README.md \
             CHANGELOG.md \
-            --exclude "*.git*"
+            --exclude "*.git*" \
+            --exclude "packs/src/*"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

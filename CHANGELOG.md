@@ -5,6 +5,34 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.1.0] – 2026-02-22
+
+### Added – Races Compendium (30 playable AD&D 2e races)
+
+Four Foundry VTT compendium packs with full structured `racialTraits` data:
+
+| Pack | Source | Races |
+|---|---|---|
+| `ars-races-phb` | Player's Handbook (2nd Ed.) | Human, Dwarf, Elf, Gnome, Half-Elf, Half-Orc, Halfling |
+| `ars-races-elves` | Complete Book of Elves | Aquatic, Dark (Drow), Gray, High, Sylvan, Valley, Wild, Winged |
+| `ars-races-dwarves` | Complete Book of Dwarves | Mountain, Hill, Deep, Duergar, Gully, Sundered, Wild |
+| `ars-races-gnomes-halflings` | Complete Book of Gnomes & Halflings | Rock/Forest/Deep/Tinker Gnome, Spriggan, Hairfoot/Stout/Tallfellow Halfling |
+
+Each race Item includes a machine-readable `racialTraits` block covering:
+- `abilityModifiers` – STR/DEX/CON/INT/WIS/CHA adjustments
+- `savingThrowBonuses` – per-category flat bonuses
+- `attackBonuses` / `defensiveBonuses`
+- `detectAbilities` – stonecunning (dwarves/gnomes), secret door detection (elves)
+- `innateAbilities` – spell-like abilities with `usesPerDay` and `minLevel` (Drow, Duergar, Svirfneblin, Spriggan)
+- `penalties` – light sensitivity with per-field numeric penalties
+- `infravision`, `sleepImmunity`, `magicResistance`
+
+### Added – Build tooling
+- `package.json` with `npm run build` to recompile all packs from `packs/src/` using `@foundryvtt/foundryvtt-cli`
+- `.gitignore` for `node_modules/` and `package-lock.json`
+
+---
+
 ## [2.0.0] – 2026-02-21
 
 ### Added – AD&D 2e Rules Overlay

@@ -41,6 +41,19 @@ A Foundry VTT module that implements faithful **AD&D 2e** rules as an overlay fo
 
 ## Features
 
+### 📚 Races Compendium (30 races across 4 books)
+
+Four built-in compendium packs — available immediately under **Compendium Packs** after enabling the module:
+
+| Pack | Source | Races |
+|---|---|---|
+| **ARS Races – PHB** | Player's Handbook | Human, Dwarf, Elf, Gnome, Half-Elf, Half-Orc, Halfling |
+| **ARS Races – Elves** | Complete Book of Elves | Aquatic, Dark (Drow), Gray, High, Sylvan, Valley, Wild, Winged |
+| **ARS Races – Dwarves** | Complete Book of Dwarves | Mountain, Hill, Deep, Duergar, Gully, Sundered, Wild |
+| **ARS Races – Gnomes & Halflings** | Complete Book of Gnomes & Halflings | Rock/Forest/Deep/Tinker Gnome, Spriggan, Hairfoot/Stout/Tallfellow |
+
+Each race stores a machine-readable `racialTraits` block (ability modifiers, saving throw bonuses, attack/defense bonuses, infravision, innate abilities, light sensitivity, magic resistance, stonecunning, secret door detection).
+
 ### 🗡️ THAC0 System
 - Per-class progression tables (Warrior, Priest, Rogue, Wizard groups) from the PHB
 - Multi-class support: best (lowest) THAC0 across all classes
