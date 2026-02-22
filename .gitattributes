@@ -1,0 +1,6 @@
+# Treat all LevelDB binary files as binary to prevent line-ending corruption
+packs/**/*.ldb binary
+packs/**/MANIFEST-* binary
+packs/**/LOCK binary
+packs/**/*.log -text
+packs/**/CURRENT -text

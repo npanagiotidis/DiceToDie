@@ -1,6 +1,6 @@
 {
   "name": "dice-to-die",
-  "version": "2.1.0",
+  "version": "2.2.1",
   "description": "DiceToDie – AD&D 2e Rules Overlay and Races Compendium for Foundry VTT / ARS",
   "scripts": {
     "build": "npm run build:packs",

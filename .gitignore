@@ -1,2 +1,7 @@
 node_modules/
 package-lock.json
+
+# LevelDB transient files – rebuilt by npm run build:packs
+packs/**/LOCK
+packs/**/LOG
+packs/**/LOG.old

@@ -15,6 +15,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Rebuild compendium packs from source
+        run: npm run build:packs
+
       - name: Extract version from tag
         id: version
         run: echo "VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
@@ -37,11 +48,14 @@ jobs:
             scripts/ \
             styles/ \
             templates/ \
-            packs/ \
             README.md \
-            CHANGELOG.md \
-            --exclude "*.git*" \
-            --exclude "packs/src/*"
+            CHANGELOG.md
+          # Add compiled packs but exclude source JSON and transient LevelDB files
+          zip -r module.zip packs/ \
+            --exclude "packs/src/*" \
+            --exclude "packs/**/LOG" \
+            --exclude "packs/**/LOG.old" \
+            --exclude "packs/**/LOCK"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -57,3 +71,4 @@ jobs:
             ```
 
             See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for what's new.
+
