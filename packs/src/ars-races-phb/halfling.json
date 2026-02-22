@@ -1,0 +1,82 @@
+{
+  "_id": "HalflingARSRace",
+  "name": "Halfling",
+  "type": "race",
+  "img": "icons/environment/settlement/house.webp",
+  "system": {
+    "description": "<h2>Halfling</h2><p>Halflings are small, cheerful demi-humans standing between 2½ and 3½ feet tall, with curly hair and large, hairy feet. They are known for their love of comfort, good food, and a peaceful life, though many are drawn to adventure by their natural curiosity. Halflings are nimble and harder to notice than their size would suggest.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Dexterity:</strong> +1</li><li><strong>Strength:</strong> −1</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 30 feet (only Stout halflings have full 60-foot infravision).</li><li><strong>Missile Attack Bonus:</strong> +3 to attack rolls with slings and all thrown weapons.</li><li><strong>Saving Throw Bonus:</strong> +4 to all saving throws vs. magic spells and wand effects.</li><li><strong>Detect Grade or Slope:</strong> On a roll of 1–3 on a d6 in underground settings.</li><li><strong>Detect New Construction and Unsafe Stonework:</strong> On a roll of 1–2 on a d6.</li><li><strong>Move Silently:</strong> Halflings can move in near-perfect silence in non-metal armor, surprising opponents on a 1–4 on a d6 when outdoors.</li><li><strong>Defensive Bonus:</strong> −4 AC penalty (bonus) vs. ogres, trolls, ogre magi, giants, and titans due to small size.</li></ul><h3>Class Restrictions</h3><p>Fighter, Cleric, Thief, Fighter/Thief multiclass.</p>",
+    "source": "Player's Handbook (2nd Edition)",
+    "abilityModifiers": {
+      "str": -1,
+      "dex": 1,
+      "con": 0,
+      "int": 0,
+      "wis": 0,
+      "cha": 0
+    },
+    "infravision": 30,
+    "requirements": "CON 10 minimum, STR 7 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic spells",
+          "bonus": 4
+        },
+        {
+          "vs": "wand effects",
+          "bonus": 4
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "slings",
+            "thrown weapons"
+          ],
+          "bonus": 3,
+          "note": "missile weapons only"
+        }
+      ],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "giants",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "grade or slope (underground)",
+          "dieSize": 6,
+          "successOn": 3
+        },
+        {
+          "ability": "new construction and unsafe stonework",
+          "dieSize": 6,
+          "successOn": 2
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Move Silently",
+          "description": "Halflings move in near-perfect silence in non-metal armor, surprising on 1–4 on a d6 outdoors."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Cleric, Thief; Fighter/Thief"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!HalflingARSRace"
+}

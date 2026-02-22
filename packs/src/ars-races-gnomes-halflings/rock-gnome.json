@@ -1,0 +1,89 @@
+{
+  "_id": "RockGnomeARSRace",
+  "name": "Rock Gnome",
+  "type": "race",
+  "img": "icons/environment/settlement/house.webp",
+  "system": {
+    "description": "<h2>Rock Gnome</h2><p>Rock gnomes are the standard gnome of the Player's Handbook and the most commonly encountered gnomish subrace. They are energetic, curious, and relentlessly inventive, with a particular love of gems, mechanisms, and all things that tick or spark. Rock gnomes are distinguishable by their earthy-toned skin, bright eyes, and enormous noses. They dwell in hilly regions and underground burrow complexes, typically alongside friendly burrowing animals. This subrace is functionally identical to the standard PHB gnome.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Intelligence:</strong> +1</li><li><strong>Wisdom:</strong> −1</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 60 feet.</li><li><strong>Detect Grade or Slope:</strong> On a roll of 1–5 on a d6 when underground.</li><li><strong>Detect Unsafe Walls, Ceilings, and Floors:</strong> On a roll of 1–7 on a d10.</li><li><strong>Determine Approximate Depth Underground:</strong> On a roll of 1–4 on a d6.</li><li><strong>Determine Approximate Direction Underground:</strong> On a roll of 1–3 on a d6.</li><li><strong>Speak with Burrowing Mammals:</strong> Communicate with moles, badgers, ground squirrels, and similar creatures.</li><li><strong>Attack Bonus:</strong> +1 to attack rolls vs. kobolds and goblins.</li><li><strong>Defensive Bonus:</strong> −4 AC vs. gnolls, bugbears, ogres, trolls, ogre magi, giants, and titans.</li><li><strong>Saving Throw Bonus:</strong> +1 per level vs. magic spells.</li></ul><h3>Class Restrictions</h3><p>Fighter, Illusionist, Cleric, Thief; Fighter/Illusionist, Fighter/Cleric, Fighter/Thief, Illusionist/Thief multiclass.</p>",
+    "source": "The Complete Book of Gnomes & Halflings",
+    "abilityModifiers": {
+      "str": 0,
+      "dex": 0,
+      "con": 0,
+      "int": 1,
+      "wis": -1,
+      "cha": 0
+    },
+    "infravision": 60,
+    "requirements": "CON 8 minimum, STR 6 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "magic",
+          "bonus": "+1 per level (minimum +1)"
+        }
+      ],
+      "attackBonuses": [
+        {
+          "vs": [
+            "kobolds",
+            "goblins"
+          ],
+          "bonus": 1
+        }
+      ],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "gnolls",
+            "bugbears",
+            "ogres",
+            "trolls",
+            "ogre magi",
+            "giants",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [
+        {
+          "ability": "grade or slope",
+          "dieSize": 6,
+          "successOn": 5
+        },
+        {
+          "ability": "unsafe walls, ceilings, and floors",
+          "dieSize": 10,
+          "successOn": 7
+        },
+        {
+          "ability": "approximate depth underground",
+          "dieSize": 6,
+          "successOn": 4
+        },
+        {
+          "ability": "approximate direction underground",
+          "dieSize": 6,
+          "successOn": 3
+        }
+      ],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Speak with Burrowing Mammals",
+          "description": "Communicate with moles, badgers, ground squirrels, and similar creatures."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Illusionist, Cleric, Thief; Fighter/Illusionist, Fighter/Cleric, Fighter/Thief, Illusionist/Thief"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!RockGnomeARSRace"
+}

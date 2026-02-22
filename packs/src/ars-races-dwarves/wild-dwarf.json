@@ -1,0 +1,65 @@
+{
+  "_id": "WildDwarfARSRace",
+  "name": "Wild Dwarf",
+  "type": "race",
+  "img": "icons/environment/wilderness/forest-clearing.webp",
+  "system": {
+    "description": "<h2>Wild Dwarf</h2><p>Wild dwarves are a primitive subrace of dwarves that have adapted to life in deep jungles and savannah regions rather than underground mountains. They are shorter and darker than mountain dwarves, with a muscular build, heavily tattooed skin, and dark braided hair adorned with bones and feathers. Wild dwarves reject metalworking, living instead off the jungle as hunters and gatherers. They worship primal nature spirits and shamans rather than the traditional dwarven pantheon. They are viewed with a mixture of fascination and disdain by civilized dwarves.</p><h3>Ability Score Adjustments</h3><ul><li><strong>Strength:</strong> +1</li><li><strong>Constitution:</strong> +1</li><li><strong>Intelligence:</strong> −1</li><li><strong>Charisma:</strong> −1</li></ul><h3>Racial Traits</h3><ul><li><strong>Infravision:</strong> 30 feet (less developed than underground dwarves).</li><li><strong>Jungle Stealth:</strong> Wild dwarves can move silently and hide in natural jungle terrain. They surprise opponents on 1–3 on a d6 in jungle environments.</li><li><strong>Poison Use:</strong> Wild dwarves are familiar with natural poisons and venoms. They receive a +2 bonus to saving throws vs. poison and can apply natural poisons to weapons with a non-weapon proficiency.</li><li><strong>Saving Throw Bonus:</strong> +1 per 3.5 points of Constitution vs. magic and poison.</li><li><strong>Defensive Bonus:</strong> −4 AC vs. giants, ogres, trolls, and titans.</li><li><strong>Stonework Lack:</strong> Wild dwarves do not have the stonecunning abilities of underground dwarves.</li></ul><h3>Class Restrictions</h3><p>Fighter, Shaman (treated as Cleric with restricted spell selection), Thief; Fighter/Thief multiclass.</p>",
+    "source": "The Complete Book of Dwarves",
+    "abilityModifiers": {
+      "str": 1,
+      "dex": 0,
+      "con": 1,
+      "int": -1,
+      "wis": 0,
+      "cha": -1
+    },
+    "infravision": 30,
+    "requirements": "CON 10 minimum",
+    "racialTraits": {
+      "sleepImmunity": 0,
+      "charmSaveBonus": 0,
+      "magicResistance": 0,
+      "savingThrowBonuses": [
+        {
+          "vs": "poison",
+          "bonus": "+1 per 3.5 CON"
+        },
+        {
+          "vs": "magic",
+          "bonus": "+1 per 3.5 CON"
+        }
+      ],
+      "attackBonuses": [],
+      "defensiveBonuses": [
+        {
+          "vs": [
+            "giants",
+            "ogres",
+            "trolls",
+            "titans"
+          ],
+          "acBonus": -4
+        }
+      ],
+      "detectAbilities": [],
+      "innateAbilities": [],
+      "specialAbilities": [
+        {
+          "name": "Jungle Stealth",
+          "description": "Move silently and hide in natural jungle terrain; surprise on 1–3 on a d6 in jungle environments."
+        },
+        {
+          "name": "Poison Use",
+          "description": "+2 to saving throws vs. poison; can apply natural poisons to weapons using appropriate non-weapon proficiency."
+        }
+      ],
+      "penalties": [],
+      "classRestrictions": "Fighter, Shaman (restricted Cleric), Thief; Fighter/Thief"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!WildDwarfARSRace"
+}

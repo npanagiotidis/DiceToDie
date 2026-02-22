@@ -1,0 +1,104 @@
+/* ─────────────────────────────────────────────────────────────────────
+   DiceToDie – AD&D 2e Styles
+   Covers: attack results, saving throws, initiative, proficiency checks
+   ───────────────────────────────────────────────────────────────────── */
+
+/* ── Attack result card ──────────────────────────────────────────── */
+
+.adnd2e-attack-result {
+  border: 2px solid #8b0000;
+  border-radius: 6px;
+  padding: 0.75em 1em;
+  background: linear-gradient(135deg, #fff8f8 0%, #fff0f0 100%);
+  font-family: inherit;
+  margin: 0.5em 0;
+}
+
+.adnd2e-attack-result h3 {
+  margin: 0 0 0.5em 0;
+  font-size: 1em;
+  color: #8b0000;
+  border-bottom: 1px solid #e0b0b0;
+  padding-bottom: 0.3em;
+}
+
+.adnd2e-roll-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.adnd2e-roll-table td {
+  padding: 0.2em 0.4em;
+  vertical-align: middle;
+}
+
+.adnd2e-roll-table td:first-child {
+  color: #555;
+  width: 65%;
+}
+
+.adnd2e-roll-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ── Saving throw result ─────────────────────────────────────────── */
+
+.adnd2e-save-result {
+  border: 2px solid #006080;
+  border-radius: 6px;
+  padding: 0.75em 1em;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e8f4ff 100%);
+  margin: 0.5em 0;
+}
+
+.adnd2e-save-result.success {
+  border-color: #2e7d32;
+  background: linear-gradient(135deg, #f0fff0 0%, #e8f5e9 100%);
+}
+
+.adnd2e-save-result.failure {
+  border-color: #b71c1c;
+  background: linear-gradient(135deg, #fff0f0 0%, #ffebee 100%);
+}
+
+/* ── Initiative result ───────────────────────────────────────────── */
+
+.adnd2e-initiative-result {
+  border: 2px solid #5c3d11;
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  background: linear-gradient(135deg, #fffbf0 0%, #fff3e0 100%);
+  margin: 0.5em 0;
+  font-size: 0.95em;
+}
+
+/* ── Proficiency check result ────────────────────────────────────── */
+
+.adnd2e-proficiency-result {
+  border: 2px solid #4a148c;
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  background: linear-gradient(135deg, #f9f0ff 0%, #f3e5f5 100%);
+  margin: 0.5em 0;
+  font-size: 0.95em;
+}
+
+/* ── Shared chat card styles ─────────────────────────────────────── */
+
+.adnd2e-attack-result strong,
+.adnd2e-save-result strong,
+.adnd2e-initiative-result strong,
+.adnd2e-proficiency-result strong {
+  font-weight: 700;
+}
+
+.adnd2e-attack-result small,
+.adnd2e-save-result small,
+.adnd2e-initiative-result small,
+.adnd2e-proficiency-result small {
+  color: #666;
+  font-size: 0.85em;
+}

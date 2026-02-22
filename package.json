@@ -1,0 +1,12 @@
+{
+  "name": "dice-to-die",
+  "version": "2.4.0",
+  "description": "DiceToDie – AD&D 2e Rules Overlay and Races Compendium for Foundry VTT / ARS",
+  "scripts": {
+    "build": "npm run build:packs",
+    "build:packs": "fvtt package pack --in packs/src/ars-races-phb --out packs -n ars-races-phb && fvtt package pack --in packs/src/ars-races-elves --out packs -n ars-races-elves && fvtt package pack --in packs/src/ars-races-dwarves --out packs -n ars-races-dwarves && fvtt package pack --in packs/src/ars-races-gnomes-halflings --out packs -n ars-races-gnomes-halflings"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.3"
+  }
+}
