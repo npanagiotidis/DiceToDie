@@ -62,12 +62,13 @@ Hooks.once("init", () => {
     },
 
     /* Rule engines */
-    thac0:        ADND2eThac0,
-    savingThrows: ADND2eSavingThrows,
-    combat:       ADND2eCombat,
-    initiative:   ADND2eInitiative,
-    proficiencies:ADND2eProficiencies,
-    spells:       ADND2eSpells,
+    thac0:           ADND2eThac0,
+    savingThrows:    ADND2eSavingThrows,
+    combat:          ADND2eCombat,
+    initiative:      ADND2eInitiative,
+    proficiencies:   ADND2eProficiencies,
+    spells:          ADND2eSpells,
+    raceApplication: ADND2eRaceApplication,
 
     /* Ability score roller (original feature) */
     abilityRoller: AbilityScoreRoller,
@@ -131,6 +132,35 @@ Hooks.on("updateActor", async (actor, changes) => {
   if (game.settings.get("dice-to-die", "autoUpdateSaves")) {
     await ADND2eSavingThrows.updateActorSaves(actor);
   }
+});
+
+/* ── Race Item Hooks ───────────────────────────────────────────────── */
+
+/**
+ * When a race Item is embedded in (dropped onto) an actor, apply the
+ * racial ability modifiers and traits to that actor automatically.
+ */
+Hooks.on("createItem", async (item, _options, _userId) => {
+  /* Only act on race Items that are owned by an actor */
+  if (item.type !== "race" || !item.parent || item.parent.documentName !== "Actor") return;
+
+  /* Only run for the GM or the actor's owner to avoid double-application */
+  const isOwner = item.parent.ownership[game.user.id] === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
+  if (!(game.user.isGM || isOwner)) return;
+
+  await ADND2eRaceApplication.applyRaceToActor(item.parent, item);
+});
+
+/**
+ * When a race Item is removed from an actor, reverse the racial modifiers.
+ */
+Hooks.on("deleteItem", async (item, _options, _userId) => {
+  if (item.type !== "race" || !item.parent || item.parent.documentName !== "Actor") return;
+
+  const isOwner = item.parent.ownership[game.user.id] === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
+  if (!(game.user.isGM || isOwner)) return;
+
+  await ADND2eRaceApplication.removeRaceFromActor(item.parent);
 });
 
 /* ── UI: Toolbar Button (original feature retained) ───────────────── */

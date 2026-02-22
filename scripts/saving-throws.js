@@ -34,14 +34,21 @@ class ADND2eSavingThrows {
     const classEntries = ADND2eSavingThrows._getClassEntries(actor);
     const baseSaves    = getBestSaves(classEntries);
 
-    const race = actor.getFlag("dice-to-die", "race")
-      ?? actor.system?.details?.race
-      ?? "human";
-    const con  = actor.system?.abilities?.con?.value
+    const con = actor.system?.abilities?.con?.value
       ?? actor.getFlag("dice-to-die", "con")
       ?? 10;
 
-    const racialBonuses = getRacialSavingThrowBonuses(race.toLowerCase(), Number(con));
+    /* Prefer compendium-sourced race data (stored by RaceApplication) over
+       the hardcoded 7-race table, so all 30 compendium races work correctly. */
+    const appliedRaceData = ADND2eRaceApplication.getAppliedRaceData(actor);
+    const racialBonuses   = appliedRaceData
+      ? ADND2eRaceApplication.computeSaveBonuses(appliedRaceData, Number(con))
+      : getRacialSavingThrowBonuses(
+          (actor.getFlag("dice-to-die", "race")
+            ?? actor.system?.details?.race
+            ?? "human").toLowerCase(),
+          Number(con)
+        );
 
     /* Magic-item bonuses stored in flags */
     const itemBonuses = actor.getFlag("dice-to-die", "savingThrowItemBonuses") ?? {};

@@ -2,7 +2,7 @@
   "id": "dice-to-die",
   "title": "DiceToDie – AD&D 2e Rules Overlay",
   "description": "Faithful AD&D 2e implementation for Foundry VTT / ARS: THAC0 system, 5 saving throw categories, multi-class rules, weapon speed factor, casting time, initiative, proficiencies, and the full spell memorization system.",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "authors": [
     {
       "name": "npanagiotidis",
@@ -21,6 +21,7 @@
     "scripts/data/class-data.js",
     "scripts/data/racial-data.js",
     "scripts/thac0.js",
+    "scripts/race-application.js",
     "scripts/saving-throws.js",
     "scripts/combat.js",
     "scripts/initiative.js",
